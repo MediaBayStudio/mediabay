@@ -1,0 +1,96 @@
+mixin forms()
+  section.forms
+    ul.forms__hints
+      li.forms__hint Заполните онлайн-заявку
+      li.forms__hint Дождитесь нашего ответа
+      li.forms__hint Наслаждайтесь!
+    a.forms__back Шаг назад
+    div.forms__progressbar
+    form.form
+      div.form__step.form__step-one
+        h3.form__step-title Выберите услугу
+        label.form__select-type
+          input(type='radio' name='section-name')
+          span Дизайн и разработка сайта
+
+        label.form__select-type
+          input(type='radio' name='section-name')
+          span Увеличение конверсий
+
+        label.form__select-type
+          input(type='radio' name='section-name')
+          span Интернет-маркетинг
+
+        label.form__select-type
+          input(type='radio' name='section-name')
+          span Текстовое наполнение
+
+      div.form__step.form__step-two.form__step-two--development
+        h3.form__step-title Состояние проекта
+        div.form__select-develop
+          label.form__select-type
+            input(type='radio' name='development-name')
+            span Создание нового сайта
+
+          label.form__select-type
+            input(type='radio' name='development-name')
+            span Доработка существующего сайта
+
+      div.form__step.form__step-two.form__step-two--sales
+        h3.form__step-title Что нужно
+        div.form__select-sales
+          label.form__select-type
+            input(type='radio' name='sales-name')
+            span Аналитика каналов привлечения
+
+          label.form__select-type
+            input(type='radio' name='sales-name')
+            span UI/UX анализ сайта
+
+      div.form__step.form__step-two.form__step-two--marketing
+        h3.form__step-title Инструменты
+        div.form__select-marketing
+          label.form__select-type
+            input(type='radio' name='marketing-name')
+            span Комплекс услуг
+
+          label.form__select-type
+            input(type='radio' name='marketing-name')
+            span SMM
+
+          label.form__select-type
+            input(type='radio' name='marketing-name')
+            span SEO
+
+          label.form__select-type
+            input(type='radio' name='marketing-name')
+            span SEA - контекстная реклама
+
+      div.form__step.form__step-three.form__step-three--seo
+        h3.form__step-title Что будем делать?
+        div.form__select-seo
+          label.form__select-type
+            input(type='radio' name='seo-name')
+            span Аналитика
+
+          label.form__select-type
+            input(type='radio' name='seo-name')
+            span Продвижение
+
+      div.form__step.form__step-three.form__step-three--sea
+        h3.form__step-title Поисковая система
+        div.form__select-sea
+          label.form__select-type
+            input(type='radio' name='seo-name')
+            span Яндекс.Директ
+
+          label.form__select-type
+            input(type='radio' name='seo-name')
+            span Google AdWords
+
+      div.form__step.form__step-four
+        h3.form__step-title Оставить заявку
+        input.form__name
+        input.form__phone
+        input.form__mail
+        iput(type='button') Отправить
