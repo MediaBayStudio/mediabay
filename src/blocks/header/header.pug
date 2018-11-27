@@ -1,4 +1,7 @@
 mixin header()
   header.header
     h1.visually-hidden Media Bay
+    a.header__wrapper.header__wrapper--active(href='/index.html')
+      svg.header__logo(width="90", height="22")
+        use(xlink:href="img/sprite-svg.svg#header-logo")
     +main-nav('Главная')

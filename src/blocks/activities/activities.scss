@@ -1,9 +1,74 @@
-// В этом файле должны быть стили для БЭМ-блока activities, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока activities, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .activities {
 
-  $block-name:                &; // #{$block-name}__element
+  margin-left: 20px;
+  margin-right: 20px;
+
+  &__header {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    background-color: #F2FAFA;
+    margin-bottom: 10px;
+  }
+
+  &__head {
+    position: relative;
+    padding: 11px 20px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-image: url('../img/svg/plus.svg');
+      background-size: 10px 10px;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__toggle {
+    font-size: 12px;
+    color: #FC364D;
+  }
+
+  &__text {
+    border-top: 1px solid rgba(95,191,205,0.2);
+    padding: 10px 20px 30px;
+
+    p {
+      margin: 0;
+      margin-top: 15px;
+      padding: 0;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
 
 }

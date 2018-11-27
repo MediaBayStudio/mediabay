@@ -1,9 +1,35 @@
-// В этом файле должны быть стили для БЭМ-блока header, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока header, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .header {
 
-  $block-name:                &; // #{$block-name}__element
+  padding: 15px 21px 8px;
+  max-width: 320px;
+  display: flex;
+  justify-content: space-between;
+
+  &__wrapper {
+    position: relative;
+
+    &--active {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 9px;
+        right: 0px;
+        width: 30px;
+        height: 5px;
+        background-color: rgba(252, 54, 77, 0.6);
+      }
+    }
+  }
+
+  &__logo {
+     width: 90px;
+     height: 22px;
+
+
+  }
 
 }

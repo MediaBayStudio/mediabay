@@ -1,22 +1,15 @@
 mixin slider()
   section.slider
-    ul.slider__header
+    ul.slider__promo
       li.slider__item
-        h2.slider__title Разрабатываем
-        span.slider__subtitle и сопровождаем
-        p.slider__lead Удобные, эстетичные и продуманные сайты делают продажи высокими, клиентов — счастливыми, а мир — прекрасным. Мы, кстати, создаем такие сайты и еще много полезных вещей.
+        figure.slider__sliced
+          picture
+            source(media='(min-width: 768px)' srcset='/img/main-slider--sm.webp' type='image/webp' )
+            source(media='(min-width: 768px)' srcset='/img/main-slider--sm.jpg' )
+            source(srcset='/img/main-slider--xs.webp' type='image/webp')
+            img(src='/img/main-slider--xs.jpg')
 
-      li.slider__item
-        h2.slider__title Разрабатываем
-        span.slider__subtitle и сопровождаем
-        p.slider__lead Удобные, эстетичные и продуманные сайты делают продажи высокими, клиентов — счастливыми, а мир — прекрасным. Мы, кстати, создаем такие сайты и еще много полезных вещей.
-
-      li.slider__item
-        h2.slider__title Разрабатываем
-        span.slider__subtitle и сопровождаем
-        p.slider__lead Удобные, эстетичные и продуманные сайты делают продажи высокими, клиентов — счастливыми, а мир — прекрасным. Мы, кстати, создаем такие сайты и еще много полезных вещей.
-
-      li.slider__item
-        h2.slider__title Разрабатываем
-        span.slider__subtitle и сопровождаем
-        p.slider__lead Удобные, эстетичные и продуманные сайты делают продажи высокими, клиентов — счастливыми, а мир — прекрасным. Мы, кстати, создаем такие сайты и еще много полезных вещей.
+        div.slider__content
+          h2.slider__title Разрабатываем
+          span.slider__subtitle и сопровождаем
+          p.slider__lead Удобные, эстетичные и продуманные сайты делают продажи высокими, клиентов — счастливыми, а мир — прекрасным. Мы, кстати, создаем такие сайты и еще много полезных вещей.
