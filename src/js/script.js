@@ -141,3 +141,23 @@ $(window).load(function() {
   $(".slider__sliced").trigger("start_quot");
 
 });
+
+
+$(document).ready(function(){
+  $('.slider__promo').slick({
+    infinite: true,
+    arrows: true,
+    dots: true
+  });
+
+  $('.activities__text:not(:first)').hide();
+
+  $('.activities__head').on ('click', function() {
+
+    $(this).toggleClass('activities__head--opened').next().slideToggle();
+    $('.activities__head').not(this).removeClass('activities__head--opened').next().slideUp();
+  })
+
+
+
+});

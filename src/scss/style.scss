@@ -3,6 +3,8 @@
 // Глобальные подключения
 @import 'variables.scss';
 @import 'fonts.scss';
+@import './src/slick/slick.scss';
+@import './src/slick/slick-theme.scss';
 
 // Растровый спрайт: примеси-генераторы правил
 @import './src/blocks/sprite-png/sprite-png.scss';

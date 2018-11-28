@@ -4,11 +4,76 @@
 
 .slider {
 
+  margin-bottom: 47px;
+
   &__promo {
     margin: 0;
-    margin-bottom: 48px;
+    margin-bottom: 65px !important;
     padding: 0;
     list-style: none;
+
+    .slick-dots {
+      left: 15px;
+      width: calc(100% - 15px);
+      text-align: left;
+
+      li {
+        width: 30px;
+        height: 30px;
+
+        button {
+          &:before {
+            width: 30px;
+            height: 30px;
+            line-height: 29px;
+            opacity: 1;
+          }
+        }
+
+        &.slick-active button:before {
+            opacity: 1;
+            border: 1px solid #FC364D;
+            border-radius: 50%;
+        }
+      }
+    }
+
+    .slick-prev,
+    .slick-next {
+        height: 60px;
+        width: 60px;
+        top: unset;
+        right: 20px;
+        bottom: -155px;
+        background-color: #fff;
+        background-image: url(../img/arrow-right.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        transition: 0.3s;
+
+        &:hover {
+          background-size: 40px;
+        }
+
+    }
+
+    .slick-prev:before, .slick-next:before {
+        content: '';
+        color: transparent;
+        opacity: 1;
+
+    }
+
+    .slick-prev {
+      background-image: url(../img/arrow-left.svg);
+      left: unset;
+      right: 65px;
+    }
+
+    .slick-next {
+        right: 5px;
+    }
   }
 
   &__sliced {
@@ -17,9 +82,13 @@
     position: relative;
   }
 
+  &__content {
+    margin-bottom: 30px;
+  }
+
   &__title {
     position: relative;
-    margin: 57px 20px -1px;
+    margin: 62px 20px -1px;
     padding: 0;
     font-size: 30px;
     line-height: 35px;
@@ -32,7 +101,30 @@
       left: -2px;
       font-size: 75px;
       color: rgba(252, 54, 77, 0.1);
+    }
 
+    &--first {
+      &::before {
+        content: '01';
+      }
+    }
+
+    &--second {
+      &::before {
+        content: '02';
+      }
+    }
+
+    &--third {
+      &::before {
+        content: '03';
+      }
+    }
+
+    &--firth {
+      &::before {
+        content: '04';
+      }
     }
   }
 
@@ -49,6 +141,15 @@
     margin-left: 20px;
     margin-right: 20px;
     max-width: 600px;
+    line-height: 20px;
+  }
+
+  &__divider {
+    min-width: 200px;
+    max-width: 627px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: rgba(22, 161, 240, 0.7);
   }
 
 }

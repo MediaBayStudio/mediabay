@@ -4,12 +4,48 @@ mixin slider()
       li.slider__item
         figure.slider__sliced
           picture
-            source(media='(min-width: 768px)' srcset='/img/main-slider--sm.webp' type='image/webp' )
-            source(media='(min-width: 768px)' srcset='/img/main-slider--sm.jpg' )
-            source(srcset='/img/main-slider--xs.webp' type='image/webp')
-            img(src='/img/main-slider--xs.jpg')
-
+            source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.webp' type='image/webp' )
+            source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.jpg' )
+            source(srcset='/img/main-slider-1--xs.webp' type='image/webp')
+            img(src='/img/main-slider-1--xs.jpg')
         div.slider__content
-          h2.slider__title Разрабатываем
+          h2.slider__title.slider__title--first Разрабатываем
           span.slider__subtitle и сопровождаем
           p.slider__lead Удобные, эстетичные и продуманные сайты делают продажи высокими, клиентов — счастливыми, а мир — прекрасным. Мы, кстати, создаем такие сайты и еще много полезных вещей.
+
+      li.slider__item
+        figure.slider__sliced
+          picture
+            //source(media='(min-width: 768px)' //srcset='/img/main-slider-1--sm.webp' type='image/webp' )
+            //source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.jpg' )
+            source(srcset='/img/main-slider-2--xs.webp' type='image/webp')
+            img(src='/img/main-slider-2--xs.jpg')
+        div.slider__content
+          h2.slider__title.slider__title--second АНАЛИЗИРУЕМ
+          span.slider__subtitle и улучшаем
+          p.slider__lead Эффективность сайта отражается на самочувствии бизнеса. Если она падает, важно оперативно выяснить проблему и героически ее победить — мы это умеем.
+
+      li.slider__item
+        figure.slider__sliced
+          picture
+            //source(media='(min-width: 768px)' //srcset='/img/main-slider---sm.webp' type='image/webp' )
+            //source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.jpg' )
+            source(srcset='/img/main-slider-3--xs.webp' type='image/webp')
+            img(src='/img/main-slider-3--xs.jpg')
+        div.slider__content
+          h2.slider__title.slider__title--third РЕКЛАМИРУЕМ
+          span.slider__subtitle И продвигаем
+          p.slider__lead Требования поисковиков и к рекламе, и к сайтам постоянно меняются — уследить сложно, но мы справляемся. Настроим, оптимизируем, поможем и поддержим.
+
+      li.slider__item
+        figure.slider__sliced
+          picture
+            //source(media='(min-width: 768px)' //srcset='/img/main-slider---sm.webp' type='image/webp' )
+            //source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.jpg' )
+            source(srcset='/img/main-slider-4--xs.webp' type='image/webp')
+            img(src='/img/main-slider-4--xs.jpg')
+        div.slider__content
+          h2.slider__title.slider__title--firth ПИШЕМ
+          span.slider__subtitle и наполняем смыслом
+          p.slider__lead Содержание важно не меньше, чем форма: тщательно продумываем смысловую составляющую и оборачиваем в простые слова, понятные каждому.
+    div.slider__divider
