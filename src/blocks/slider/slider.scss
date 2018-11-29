@@ -4,7 +4,11 @@
 
 .slider {
 
-  margin-bottom: 47px;
+  margin-bottom: 58px;
+
+  @media (min-width: $screen-sm) {
+    margin-top: -70px;
+  }
 
   &__promo {
     margin: 0;
@@ -12,10 +16,20 @@
     padding: 0;
     list-style: none;
 
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0 !important;
+    }
+
     .slick-dots {
       left: 15px;
       width: calc(100% - 15px);
       text-align: left;
+
+      @media (min-width: $screen-sm) {
+        left: 35px;
+        width: calc(100% - 35px);
+        bottom: 150px;
+      }
 
       li {
         width: 30px;
@@ -27,6 +41,10 @@
             height: 30px;
             line-height: 29px;
             opacity: 1;
+
+            @media (min-width: $screen-sm) {
+              font-size: 7px;
+            }
           }
         }
 
@@ -34,6 +52,10 @@
             opacity: 1;
             border: 1px solid #FC364D;
             border-radius: 50%;
+
+            @media (min-width: $screen-sm) {
+              border-width: 2px;
+            }
         }
       }
     }
@@ -52,8 +74,57 @@
         background-size: 30px;
         transition: 0.3s;
 
-        &:hover {
+        @media (min-width: $screen-sm) {
+          height: 80px;
+          width: 80px;
+          bottom: -40px;
           background-size: 40px;
+          background-color: transparent;
+        }
+
+        @media (min-width: 788px) {
+          height: 80px;
+          width: 82px;
+        }
+
+        @media (min-width: 808px) {
+          height: 82px;
+          width: 83px;
+        }
+
+        @media (min-width: 828px) {
+          height: 83px;
+          width: 85px;
+        }
+
+        @media (min-width: 848px) {
+          height: 84px;
+          width: 87px;
+        }
+
+        @media (min-width: 868px) {
+          height: 85px;
+          width: 88px;
+        }
+
+        @media (min-width: 888px) {
+          height: 87px;
+          width: 90px;
+        }
+
+        @media (min-width: 908px) {
+          height: 87px;
+          width: 92px;
+        }
+
+        @media (min-width: 928px) {
+          height: 88px;
+          width: 93px;
+        }
+
+
+        &:hover {
+          background-size: 50px;
         }
 
     }
@@ -62,17 +133,98 @@
         content: '';
         color: transparent;
         opacity: 1;
-
     }
 
     .slick-prev {
       background-image: url(../img/arrow-left.svg);
       left: unset;
       right: 65px;
+
+      @media (min-width: $screen-sm) {
+        right: 320px;
+        z-index: 10;
+      }
+
+      @media (min-width: 788px) {
+        right: 327px;
+      }
+
+      @media (min-width: 808px) {
+        right: 333px;
+      }
+
+      @media (min-width: 828px) {
+        right: 340px;
+      }
+
+      @media (min-width: 848px) {
+        right: 347px;
+      }
+
+      @media (min-width: 868px) {
+        right: 353px;
+      }
+
+      @media (min-width: 888px) {
+        right: 360px;
+      }
+
+      @media (min-width: 908px) {
+        right: 367px;
+      }
+
+      @media (min-width: 928px) {
+        right: 373px;
+      }
     }
 
     .slick-next {
         right: 5px;
+
+        @media (min-width: $screen-sm) {
+          right: 240px;
+        }
+
+        @media (min-width: 788px) {
+          right: 247px;
+        }
+
+        @media (min-width: 808px) {
+          right: 250px;
+        }
+
+        @media (min-width: 828px) {
+          right: 255px;
+        }
+
+        @media (min-width: 848px) {
+          right: 260px;
+        }
+
+        @media (min-width: 868px) {
+          right: 265px;
+        }
+
+        @media (min-width: 888px) {
+          right: 270px;
+        }
+
+        @media (min-width: 908px) {
+          right: 275px;
+        }
+
+        @media (min-width: 928px) {
+          right: 280px;
+        }
+    }
+  }
+
+  &__item {
+    @media (min-width: $screen-sm) {
+      position: relative;
+      display: grid!important;
+      grid-template-columns: minmax(288px,464px) minmax(480px, 560px);
+      align-items: center;
     }
   }
 
@@ -80,19 +232,39 @@
     margin: 0;
     padding: 0;
     position: relative;
+
+    @media (min-width: $screen-sm) {
+      order: 2;
+    }
   }
 
   &__content {
     margin-bottom: 30px;
+
+    @media (min-width: $screen-sm) {
+      position: relative;
+      margin: 0;
+      order: 1;
+    }
   }
 
   &__title {
     position: relative;
-    margin: 62px 20px -1px;
+    margin: 74px 20px 3px;
     padding: 0;
     font-size: 30px;
     line-height: 35px;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      font-size: 34px;
+      line-height: 65px;
+      margin: 0;
+      position: absolute;
+      left: 40px;
+      right: -60px;
+      top: -115px;
+    }
 
     &::before {
       content: '01';
@@ -101,6 +273,11 @@
       left: -2px;
       font-size: 75px;
       color: rgba(252, 54, 77, 0.1);
+
+      @media (min-width: $screen-sm) {
+        top: -20px;
+        font-size: 87px;
+      }
     }
 
     &--first {
@@ -135,13 +312,38 @@
     font-size: 18px;
     line-height: 35px;
     font-weight: bold;
+
+    @media (min-width: $screen-sm) {
+      font-size: 21px;
+      line-height: 65px;
+      font-weight: 500;
+      margin-left: 0;
+      position: absolute;
+      top: -70px;
+      left: 40px;
+      right: 0px;
+    }
   }
 
   &__lead {
+    margin-top: 19px;
     margin-left: 20px;
     margin-right: 20px;
     max-width: 600px;
     line-height: 20px;
+
+    @media (min-width: $screen-sm) {
+      font-size: 14px;
+      line-height: 25px;
+      margin: 0;
+      position: absolute;
+      right: -60px;
+      left: 40px;
+      top: 0;
+      margin-right: 0;
+      min-width: 320px;
+      max-width: 450px;
+    }
   }
 
   &__divider {
@@ -150,6 +352,73 @@
     height: 60px;
     margin-right: 20px;
     background-color: rgba(22, 161, 240, 0.7);
+
+    @media (min-width: $screen-sm) {
+      height: 80px;
+      position: relative;
+      top: -80px;
+      margin-right: 52%;
+    }
+
+    @media (min-width: 788px) {
+      height: 82px;
+      top: -82px;
+    }
+
+    @media (min-width: 808px) {
+      height: 83px;
+      top: -83px;
+    }
+
+    @media (min-width: 828px) {
+      height: 85px;
+      top: -85px;
+      margin-right: 51%;
+    }
+
+    @media (min-width: 848px) {
+      height: 87px;
+      top: -87px;
+    }
+
+    @media (min-width: 868px) {
+      height: 88px;
+      top: -88px;
+    }
+
+    @media (min-width: 888px) {
+      height: 90px;
+      top: -90px;
+      margin-right: 50%;
+    }
+
+    @media (min-width: 908px) {
+      height: 92px;
+      top: -92px;
+    }
+
+    @media (min-width: 928px) {
+      height: 93px;
+      top: -93px;
+    }
+
+    @media (min-width: 948px) {
+      margin-right: 49%;
+    }
+
+    @media (min-width: 968px) {
+      margin-right: 48%;
+    }
+
+    @media (min-width: 988px) {
+      margin-right: 47%;
+    }
+
+    @media (min-width: 1008px) {
+      margin-right: 46%;
+    }
+
+
   }
 
 }

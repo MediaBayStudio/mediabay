@@ -1,7 +1,7 @@
 mixin slider()
   section.slider
-    ul.slider__promo
-      li.slider__item
+    div.slider__promo
+      section.slider__item
         figure.slider__sliced
           picture
             source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.webp' type='image/webp' )
@@ -11,13 +11,13 @@ mixin slider()
         div.slider__content
           h2.slider__title.slider__title--first Разрабатываем
           span.slider__subtitle и сопровождаем
-          p.slider__lead Удобные, эстетичные и продуманные сайты делают продажи высокими, клиентов — счастливыми, а мир — прекрасным. Мы, кстати, создаем такие сайты и еще много полезных вещей.
+          p.slider__lead Удобные, эстетичные и продуманные сайты делают продажи высокими, клиентов — счастливыми, а мир — прекрасным. Мы, кстати, создаем такие сайты и еще много полезного.
 
-      li.slider__item
+      section.slider__item
         figure.slider__sliced
           picture
-            //source(media='(min-width: 768px)' //srcset='/img/main-slider-1--sm.webp' type='image/webp' )
-            //source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.jpg' )
+            source(media='(min-width: 768px)' srcset='/img/main-slider-2--sm.webp' type='image/webp' )
+            source(media='(min-width: 768px)' srcset='/img/main-slider-2--sm.jpg' )
             source(srcset='/img/main-slider-2--xs.webp' type='image/webp')
             img(src='/img/main-slider-2--xs.jpg')
         div.slider__content
@@ -25,7 +25,7 @@ mixin slider()
           span.slider__subtitle и улучшаем
           p.slider__lead Эффективность сайта отражается на самочувствии бизнеса. Если она падает, важно оперативно выяснить проблему и героически ее победить — мы это умеем.
 
-      li.slider__item
+      section.slider__item
         figure.slider__sliced
           picture
             //source(media='(min-width: 768px)' //srcset='/img/main-slider---sm.webp' type='image/webp' )
@@ -37,7 +37,7 @@ mixin slider()
           span.slider__subtitle И продвигаем
           p.slider__lead Требования поисковиков и к рекламе, и к сайтам постоянно меняются — уследить сложно, но мы справляемся. Настроим, оптимизируем, поможем и поддержим.
 
-      li.slider__item
+      section.slider__item
         figure.slider__sliced
           picture
             //source(media='(min-width: 768px)' //srcset='/img/main-slider---sm.webp' type='image/webp' )

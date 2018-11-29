@@ -21,6 +21,11 @@
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 500;
+
+      @media (min-width: $screen-sm) {
+        font-size: 13px;
+        line-height: 1;
+      }
     }
 
     &:hover {
@@ -32,6 +37,13 @@
         bottom: 3px;
         width: 40px;
         height: 4px;
+
+        @media (min-width: $screen-sm) {
+          width: 50px;
+          height: 5px;
+          right: -3px;
+          bottom: 4px;
+        }
       }
     }
 
@@ -39,6 +51,11 @@
       &::after {
         right: -1px;
         width: 35px;
+
+        @media (min-width: $screen-sm) {
+          width: 45px;
+          right: -4px;
+        }
       }
     }
   }

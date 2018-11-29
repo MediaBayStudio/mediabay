@@ -130,15 +130,32 @@ $(window).load(function() {
 
   $(window).resize(function () {
     waitForFinalEvent(function(){
-
       $("div.tile").remove();
-      $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+      if ($(window).width() < '768') {
+        $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+      }
+      else {
+        $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+      }
+
       $(".slider__sliced").trigger("start_quot");
     }, 500);
   });
 
-  $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
-  $(".slider__sliced").trigger("start_quot");
+  if ($(window).width() < '768') {
+    $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+  }
+  else {
+    $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+  }
+
+
+  //задаем анимацию фона для таблицы компетенций
+  var tds = $('.competitions__table td');
+  setInterval(function(){
+    var rand = Math.floor(Math.random() * $('.competitions__table td').length);
+     $('.competitions__table td').eq(rand).toggleClass('colored');
+  }, 4000);
 
 });
 
@@ -153,7 +170,6 @@ $(document).ready(function(){
   $('.activities__text:not(:first)').hide();
 
   $('.activities__head').on ('click', function() {
-
     $(this).toggleClass('activities__head--opened').next().slideToggle();
     $('.activities__head').not(this).removeClass('activities__head--opened').next().slideUp();
   })

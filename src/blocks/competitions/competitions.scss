@@ -1,9 +1,59 @@
-// В этом файле должны быть стили для БЭМ-блока competitions, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока competitions, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .competitions {
 
-  $block-name:                &; // #{$block-name}__element
+  margin-left: 20px;
+  margin-right: 20px;
+
+  &__header {
+    margin: 0;
+    margin-bottom: 17px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__lead {
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 25px;
+    line-height: 20px;
+  }
+
+  &__table {
+    border-spacing: 0;
+    td {
+      width: 56px;
+      height: 56px;
+      font-size: 10px;
+      text-align: center;
+    }
+  }
 
 }
+
+.colored {
+  animation: color 7s ease-in-out infinite;
+}
+
+
+@keyframes color {
+0% {
+background-color: rgba(28, 211, 204,0);
+ }
+34%{
+background-color:  rgba(28, 211, 204,0.1);
+}
+51%{
+background-color:  rgba(28, 211, 204,0.2);
+ }
+85%{
+background-color:  rgba(28, 211, 204,0.1);
+   }
+100%{
+background-color:  rgba(28, 211, 204,0);
+   }
+ }
