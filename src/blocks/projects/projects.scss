@@ -1,9 +1,130 @@
-// В этом файле должны быть стили для БЭМ-блока projects, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока projects, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .projects {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  box-shadow: 1px 5px 50px rgba(0,27,171,0.05);
 
-  $block-name:                &; // #{$block-name}__element
+  &__header {
+    margin: 0;
+    margin-bottom: 96px;
+    padding: 57px 20px 32px 20px;
+    background-color: #DDF8F7;
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    padding: 0 20px;
+
+    .slick-list {
+      min-height: 230px;
+    }
+
+    .slick-dots {
+      width: 90%;
+      top: -65px;
+      bottom: unset;
+      text-align: left;
+
+      li {
+        margin-left: 0;
+        margin-right: 17px;
+
+        button {
+          width: 30px;
+          height: 30px;
+          font-size: 13px;
+          color: #000;
+          font-weight: 500;
+
+          &::after {
+            content: '0';
+            opacity: 1;
+            font-size: 13px;
+            position: absolute;
+            top: 15px;
+            left: 3px;
+            font-weight: 500;
+          }
+
+          &::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &.slick-active button:before {
+            opacity: 1;
+            border: 1px solid #FC364D;
+            border-radius: 50%;
+            left: -4px;
+        }
+      }
+
+
+    }
+
+    .slick-prev,
+    .slick-next {
+        height: 30px;
+        width: 60px;
+        top: unset;
+        right: unset;
+        bottom: -36px;
+        background-color: #fff;
+        background-image: url(../img/arrow-right.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 45px;
+        transition: 0.3s;
+
+        &:hover {
+          background-size: 50px;
+        }
+    }
+
+    .slick-prev:before, .slick-next:before {
+        content: '';
+        color: transparent;
+        opacity: 1;
+    }
+
+    .slick-prev {
+      background-image: url(../img/arrow-left.svg);
+      left: 10px;
+
+    }
+
+    .slick-next {
+      left: 70px;
+    }
+  }
+
+  &__title {
+    max-width: 450px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  &__text {
+    max-width: 500px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #666584;
+
+    p {
+      margin: 0;
+      margin-bottom: 15px;
+    }
+  }
 
 }

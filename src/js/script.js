@@ -142,13 +142,18 @@ $(window).load(function() {
     }, 500);
   });
 
+});
+
+
+$(document).ready(function(){
+
   if ($(window).width() < '768') {
     $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
   }
   else {
     $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
   }
-
+  $(".slider__sliced").trigger("start_quot");
 
   //задаем анимацию фона для таблицы компетенций
   var tds = $('.competitions__table td');
@@ -157,11 +162,13 @@ $(window).load(function() {
      $('.competitions__table td').eq(rand).toggleClass('colored');
   }, 4000);
 
-});
-
-
-$(document).ready(function(){
   $('.slider__promo').slick({
+    infinite: true,
+    arrows: true,
+    dots: true
+  });
+
+  $('.slider__projects').slick({
     infinite: true,
     arrows: true,
     dots: true
@@ -170,9 +177,227 @@ $(document).ready(function(){
   $('.activities__text:not(:first)').hide();
 
   $('.activities__head').on ('click', function() {
+
     $(this).toggleClass('activities__head--opened').next().slideToggle();
     $('.activities__head').not(this).removeClass('activities__head--opened').next().slideUp();
   })
+
+  $('.form__step-one').on('change', function() {
+    var type = $('input[name=section-name]:checked', '.form').val();
+    var value = ".form__step-two--" + type;
+    var header = '';
+    var width = '25%';
+    var class_name = '';
+
+    switch (type) {
+      case 'design':
+        header = 'СОСТОЯНИЕ ПРОЕКТА';
+        class_name = 'step-two';
+        width = '75%';
+      break;
+
+      case 'conversion':
+        header = 'Что нужно?';
+        class_name = 'step-two';
+        width = '75%';
+      break;
+
+      case 'marketing':
+        header = 'Инструменты';
+        class_name = 'step-two';
+        width = '50%';
+      break;
+
+      case 'texts':
+        header = 'Оставить заявку';
+        class_name = 'step-four';
+        width = '100%';
+      break;
+      default:
+
+    }
+    if (value == '.form__step-two--texts') value = ".form__step-four";
+    $('.form__step-one').hide();
+    $('#form__step-title').text(header);
+    $('#progress .progress-bar').css('width', width);
+    $('#progress').addClass(class_name);
+    $('.forms__back').removeClass('forms__back--disabled');
+    $(value).css('display', 'flex');
+  })
+
+  $('.form__step-two').on('change', function() {
+    var value = $('input:checked', '.form__step-two').val();
+    var header = '';
+    var width = '50%';
+    var class_name = '';
+
+    if (value == 'seo' || value == 'sea') {
+      switch (value) {
+        case 'seo':
+          header= 'ЧТО БУДЕМ ДЕЛАТЬ?';
+          class_name = 'step-three';
+          width = '75%';
+        break;
+
+        case 'sea':
+          header= 'ПОИСКОВАЯ СИСТЕМА';
+          class_name = 'step-three';
+          width = '75%';
+        break;
+        default:
+      }
+      value = ".form__step-three--"+value;
+    }
+    else {
+      width = '100%';
+      header = 'Оставить заявку';
+      value = ".form__step-four";
+      class_name = 'step-four';
+    }
+
+    $('.form__step-two').hide();
+    $('#form__step-title').text(header);
+    $('#progress').removeClass('step-two').addClass(class_name);
+    $('#progress .progress-bar').css('width', width);
+    $(value).css('display', 'flex');
+  })
+
+  $('.form__step-three').on('change', function() {
+    var width = '100%';
+    $('.form__step-three').hide();
+    $('#form__step-title').text('Оставить заявку');
+    $('#progress').removeClass('step-three').addClass('step-four');
+    $('#progress .progress-bar').css('width', width);
+    $('.form__step-four').css('display', 'flex');
+  })
+
+  $('.forms__back').on('click', function() {
+    var classList = $('#progress').attr("class").split(' ');
+    switch (classList[1]) {
+      case 'step-two':
+        $('.form__step-two input[type=radio]').each(function(){
+          $(this).prop( "checked", false );
+        });
+        $('.form__step-one input[type=radio]').each(function(){
+          $(this).prop( "checked", false );
+        });
+        $('.form__step-two').hide();
+        $('#form__step-title').text('Выберите услугу');
+        $('#progress .progress-bar').css('width', '25%');
+        $('#progress').removeClass('step-two');
+        $('.forms__back').addClass('forms__back--disabled');
+        $('.form__step-one').css('display', 'flex');
+      break;
+
+      case 'step-three':
+        $('.form__step-three input[type=radio]').each(function(){
+          $(this).prop( "checked", false );
+        });
+        $('.form__step-two input[type=radio]').each(function(){
+          $(this).prop( "checked", false );
+        });
+        $('.form__step-three').hide();
+        $('#form__step-title').text('Инструменты');
+        $('#progress .progress-bar').css('width', '50%');
+        $('#progress').removeClass('step-three').addClass('step-two');
+        $('.form__step-two--marketing').css('display', 'flex');
+      break;
+
+      case 'step-four':
+        var type = '';
+        var category = '';
+        var header = 'ВЫБЕРИТЕ УСЛУГУ';
+        $('.form__step-three input[type=radio]').each(function(){ // если дошли до третьего шага мб только seo или sea
+          if ($(this).prop("checked")) type = $(this).val();
+          $(this).prop( "checked", false );
+        });
+        if (type) {
+          switch (type) {
+            case 'analisys':
+              category = "--seo";
+              header = 'Что будем делать?';
+            break;
+            case 'promotion':
+              category = "--seo";
+              header = 'Что будем делать?';
+            break;
+            case 'yandex':
+              category = "--sea";
+              header = 'Поисковая система';
+            break;
+            case 'google':
+              category = "--sea";
+              header = 'Поисковая система';
+            break;
+            default:
+          }
+          $('.form__step-four').hide();
+          $('#progress .progress-bar').css('width', '75%');
+          $('#progress').removeClass('step-four').addClass('step-three');
+          $('.form__step-three'+category).css('display', 'flex');
+        }
+        else {
+          $('.form__step-two input[type=radio]').each(function(){ // если перешли со второго шага
+            if ($(this).prop("checked")) type = $(this).val();
+            $(this).prop( "checked", false );
+          });
+          if (type) {
+            switch (type) {
+              case 'new-site':
+                category = "--design";
+                header = 'СОСТОЯНИЕ ПРОЕКТА';
+              break;
+              case 'old-site':
+                category = "--design";
+                header = 'СОСТОЯНИЕ ПРОЕКТА';
+              break;
+              case 'analitics':
+                category = "--conversion";
+                header = 'ЧТО НУЖНО?';
+              break;
+              case 'ui-ux':
+                category = "--conversion";
+                header = 'ЧТО НУЖНО?';
+              break;
+              case 'all-includes':
+                category = "--marketing";
+                header = 'ИНСТРУМЕНТЫ';
+              break;
+              case 'smm':
+                category = "--marketing";
+                header = 'ИНСТРУМЕНТЫ';
+              break;
+              default:
+            }
+            $('.form__step-four').hide();
+            $('#progress .progress-bar').css('width', '50%');
+            $('#progress').removeClass('step-four').addClass('step-two');
+            $('.form__step-two'+category).css('display', 'flex');
+          }
+          else {
+            $('.form__step-one input[type=radio]').each(function(){
+              $(this).prop( "checked", false );
+            })
+            $('.form__step-four').hide();
+            $('#progress .progress-bar').css('width', '25%');
+            $('#progress').removeClass('step-four');
+            $('.form__step-one').css('display', 'flex');
+            $('.forms__back').addClass('forms__back--disabled');
+          }
+        }
+        $('#form__step-title').text(header);
+        $('.form__step-two input[type=radio]').each(function(){
+          $(this).prop( "checked", false );
+        });
+        //$('.form__step-three').hide();
+        //$('.form__step-two--marketing').css('display', 'flex');
+      break;
+      default:
+
+    }
+
+  })
+
 
 
 

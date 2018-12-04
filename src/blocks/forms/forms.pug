@@ -1,96 +1,152 @@
 mixin forms()
   section.forms
     ul.forms__hints
-      li.forms__hint Заполните онлайн-заявку
-      li.forms__hint Дождитесь нашего ответа
-      li.forms__hint Наслаждайтесь!
-    a.forms__back Шаг назад
-    div.forms__progressbar
-    form.form
+      li.forms__hint.forms__hint--first Заполните онлайн-заявку
+      li.forms__hint.forms__hint--second Дождитесь нашего ответа
+      li.forms__hint.forms__hint--third Наслаждайтесь!
+    form.forms__body.form
+      h3.form__step-title(id='form__step-title') ВЫБЕРИТЕ УСЛУГУ
+      div.form__progress
+        a.forms__back.forms__back--disabled Шаг назад
+        div.progress
+          progress(max='100' value='25')
+          div.progress-bg(id='progress')
+            div.progress-bar
+
       div.form__step.form__step-one
-        h3.form__step-title Выберите услугу
-        label.form__select-type
-          input(type='radio' name='section-name')
-          span Дизайн и разработка сайта
+        div.form__answers
+          p
+            input(type='radio' name='section-name' id='design' value='design').form__radios
+            label.form__label(for='design')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#design")
+              span Дизайн и разработка сайта
 
-        label.form__select-type
-          input(type='radio' name='section-name')
-          span Увеличение конверсий
+          p
+            input(type='radio' name='section-name' id='conversion' value='conversion').form__radios
+            label.form__label(for='conversion')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#conversion")
+              span Увеличение конверсий
 
-        label.form__select-type
-          input(type='radio' name='section-name')
-          span Интернет-маркетинг
+          p
+            input(type='radio' name='section-name' id='marketing' value='marketing').form__radios
+            label.form__label(for='marketing')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#marketing")
+              span Интернет-маркетинг
 
-        label.form__select-type
-          input(type='radio' name='section-name')
-          span Текстовое наполнение
+          p
+            input(type='radio' name='section-name' id='texts' value='texts').form__radios
+            label.form__label(for='texts')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#texts")
+              span Текстовое наполнение
 
-      div.form__step.form__step-two.form__step-two--development
-        h3.form__step-title Состояние проекта
-        div.form__select-develop
-          label.form__select-type
-            input(type='radio' name='development-name')
-            span Создание нового сайта
+      div.form__step.form__step-two.form__step-two--design
+        div.form__answers
+          p
+            input(type='radio' name='development-name' id='new-site' value='new-site').form__radios
+            label.form__label(for='new-site')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#design")
+              span Создание нового сайта
 
-          label.form__select-type
-            input(type='radio' name='development-name')
-            span Доработка существующего сайта
+          p
+            input(type='radio' name='development-name' id='old-site' value='old-site').form__radios
+            label.form__label(for='old-site')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#conversion")
+              span Доработка существующего сайта
 
-      div.form__step.form__step-two.form__step-two--sales
-        h3.form__step-title Что нужно
-        div.form__select-sales
-          label.form__select-type
-            input(type='radio' name='sales-name')
-            span Аналитика каналов привлечения
+      div.form__step.form__step-two.form__step-two--conversion
+        div.form__answers
+          p
+            input(type='radio' name='sales-name' id='analitics' value='analitics').form__radios
+            label.form__label(for='analitics')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#design")
+              span Аналитика каналов привлечения
 
-          label.form__select-type
-            input(type='radio' name='sales-name')
-            span UI/UX анализ сайта
+          p
+            input(type='radio' name='sales-name' id='ui-ux' value='ui-ux').form__radios
+            label.form__label(for='ui-ux')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#conversion")
+              span UI/UX анализ сайта
 
       div.form__step.form__step-two.form__step-two--marketing
-        h3.form__step-title Инструменты
-        div.form__select-marketing
-          label.form__select-type
-            input(type='radio' name='marketing-name')
-            span Комплекс услуг
+        div.form__answers
+          p
+            input(type='radio' name='marketing-name' id='all-includes' value='all-includes').form__radios
+            label.form__label(for='all-includes')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#design")
+              span Комплекс услуг
 
-          label.form__select-type
-            input(type='radio' name='marketing-name')
-            span SMM
+          p
+            input(type='radio' name='marketing-name' id='smm' value='smm').form__radios
+            label.form__label(for='smm')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#conversion")
+              span SMM
 
-          label.form__select-type
-            input(type='radio' name='marketing-name')
-            span SEO
+          p
+            input(type='radio' name='marketing-name' id='seo' value='seo').form__radios
+            label.form__label(for='seo')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#design")
+              span SEO
 
-          label.form__select-type
-            input(type='radio' name='marketing-name')
-            span SEA - контекстная реклама
+          p
+            input(type='radio' name='marketing-name' id='sea' value='sea').form__radios
+            label.form__label(for='sea')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#conversion")
+              span SEA - контекстная реклама
 
       div.form__step.form__step-three.form__step-three--seo
-        h3.form__step-title Что будем делать?
-        div.form__select-seo
-          label.form__select-type
-            input(type='radio' name='seo-name')
-            span Аналитика
+        div.form__answers
+          p
+            input(type='radio' name='seo-name' id='analisys' value='analisys').form__radios
+            label.form__label(for='analisys')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#design")
+              span Аналитика
 
-          label.form__select-type
-            input(type='radio' name='seo-name')
-            span Продвижение
+          p
+            input(type='radio' name='seo-name' id='promotion' value='promotion').form__radios
+            label.form__label(for='promotion')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#conversion")
+              span Продвижение
 
       div.form__step.form__step-three.form__step-three--sea
-        h3.form__step-title Поисковая система
-        div.form__select-sea
-          label.form__select-type
-            input(type='radio' name='seo-name')
-            span Яндекс.Директ
+        div.form__answers
+          p
+            input(type='radio' name='system-name' id='yandex' value='yandex').form__radios
+            label.form__select-type(for='yandex')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#design")
+              span Яндекс.Директ
 
-          label.form__select-type
-            input(type='radio' name='seo-name')
-            span Google AdWords
+          p
+            input(type='radio' name='system-name' id='google' value='google').form__radios
+            label.form__select-type(for='google')
+              svg.form__icon.form__icon--design(width="35", height="30")
+                use(xlink:href="img/sprite-svg.svg#conversion")
+              span Google AdWords
 
       div.form__step.form__step-four
-        h3.form__step-title Оставить заявку
-        input.form__name
-        input.form__phone
-        input.form__mail
-        iput(type='button') Отправить
+        div.form__answers
+          p.form__fields
+            input.form__name(type='text' placeholder='Представьтесь')
+          p.form__fields
+            input.form__phone(type='phone' placeholder='Номер телефона')
+          p.form__fields
+            input.form__mail(type='email' placeholder='E-mail')
+          p.form__fields--agree
+            input.form__agree(type='checkbox' id='agreeded')
+            label.form__agree--label(for='agreeded') Принимаю соглашение об использовании персональных данных
+          p.form__fields
+            input.form__send(type='submit' value='Отправить')

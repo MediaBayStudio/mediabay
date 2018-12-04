@@ -1,9 +1,103 @@
-// В этом файле должны быть стили для БЭМ-блока costs, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока costs, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .costs {
+  padding-left: 20px;
+  padding-right: 21px;
 
-  $block-name:                &; // #{$block-name}__element
+  &__header {
+    margin: 0;
+    margin-bottom: 17px;
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
+  &__lead {
+    margin: 0;
+    line-height: 20px;
+    margin-bottom: 46px;
+    max-width: 600px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -11px;
+      left: -1px;
+      width: 80px;
+      height: 2px;
+      background-color: #FC364D;
+
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 9px;
+    max-width: 600px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #5F5D66;
+  }
+
+  &__price {
+    margin-left: -2px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  &__advantages-list {
+    margin: 0;
+    margin-top: 14px;
+    margin-left: -20px;
+    margin-right: 18%;
+    padding: 20px;
+    padding-bottom: 40px;
+    list-style: none;
+    background-color: #5FBFCD;
+    color: #fff;
+    font-size: 9px;
+    line-height: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 152px;
+      right: -14px;
+      width: 180px;
+      height: 180px;
+      background-image: url('../img/landing.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  &__advantages-item {
+    margin-bottom: 10px;
+  }
 }
