@@ -8,6 +8,22 @@
   margin-right: 20px;
   margin-bottom: 58px;
 
+  @media (min-width: $screen-sm) {
+    min-height: 420px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background-image: url(../img/activities-back.png);
+    background-size: 38% 100%;
+    background-repeat: no-repeat;
+    margin-left: 0;
+    margin-right: 9px;
+    padding-left: 70px;
+    padding-top: 61px;
+    margin-bottom: 72px;
+  }
+
   &__header {
     margin: 0;
     margin-bottom: 25px;
@@ -15,17 +31,38 @@
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+      width: 100%;
+      font-size: 28px;
+      line-height: 35px;
+    }
   }
 
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $screen-sm)  {
+      margin-top: -43px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 293px;
+    }
   }
 
   &__item {
     background-color: #F2FAFA;
     margin-bottom: 10px;
+
+    @media (min-width: $screen-sm) {
+      margin: 0;
+      background-color: transparent;
+    }
   }
 
   &__head {
@@ -36,6 +73,10 @@
     justify-content: space-between;
     cursor: pointer;
 
+    @media (min-width: $screen-sm) {
+      padding: 0;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -45,15 +86,28 @@
       width: 10px;
       height: 10px;
 
-      background-image: url('../img/plus.svg');
+      background-image: url('../img/minus.svg');
       background-size: 10px 10px;
       background-position: top center;
       background-repeat: no-repeat;
+
+      @media (min-width: $screen-sm) {
+          background-image: none;
+      }
     }
 
     &--opened {
       &::after{
-        background-image: url('../img/minus.svg');
+        background-image: url('../img/plus.svg');
+
+        @media (min-width: $screen-sm) {
+          top: 0;
+          margin-top: 0;
+          right: unset;
+          left: 0;
+          height: 100%;
+          border-left: 3px solid rgba(252,54,77,0.6);
+        }
       }
     }
 
@@ -67,6 +121,14 @@
     font-size: 12px;
     line-height: 25px;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      font-size: 13px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 20px;
+      font-weight: 500;
+    }
   }
 
   &__toggle {
@@ -78,12 +140,29 @@
     border-top: 1px solid rgba(95,191,205,0.2);
     padding: 10px 20px 30px;
 
+
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      top: 82px;
+      left: 70px;
+      padding-left: 0;
+      width: 60%;
+      border-top: none;
+
+    }
+
     p {
       margin: 0;
       margin-top: 15px;
       padding: 0;
       font-size: 12px;
       line-height: 20px;
+
+      @media (min-width: $screen-sm) {
+        margin-top: 25px;
+        font-size: 14px;
+        line-height: 25px;
+      }
     }
   }
 

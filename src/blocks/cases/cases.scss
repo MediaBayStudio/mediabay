@@ -15,6 +15,12 @@
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 26px;
+      font-size: 28px;
+      line-height: 35px;
+    }
   }
 
   &__list {
@@ -36,6 +42,11 @@
     font-weight: bold;
     text-transform: uppercase;
 
+    @media (min-width: $screen-sm) {
+      font-size: 22px;
+      line-height: 50px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -44,6 +55,10 @@
       width: 80px;
       height: 2px;
       background-color: #FC364D;
+
+      @media (min-width: $screen-sm) {
+        top: 21px;
+      }
     }
   }
 
@@ -55,6 +70,13 @@
     margin-top: 18px;
     margin-bottom: 10px;
     object-fit: cover;
+
+    @media (min-width: $screen-sm) {
+      width: calc(100% - 280px);
+      margin-left: 100px;
+      margin-right: 180px;
+      margin-bottom: 25px;
+    }
   }
 
   &__lead {
@@ -62,6 +84,14 @@
     margin-bottom: 11px;
     line-height: 20px;
     max-width: 600px;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 100px;
+      margin-right: 180px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      line-height: 25px;
+    }
   }
 
   &__link {
@@ -71,6 +101,11 @@
     color: #000;
     text-decoration: none;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+        margin-left: 100px;
+        font-size: 12px;
+    }
 
 
     &::after {
@@ -84,6 +119,10 @@
       background-repeat: no-repeat;
       background-size: 100%;
       transition: 0.3s;
+
+      @media (min-width: $screen-sm) {
+        top: 3px;
+      }
     }
 
     &:hover {

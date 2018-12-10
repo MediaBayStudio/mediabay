@@ -5,11 +5,23 @@
 .forms {
   padding-bottom: 60px;
 
+  @media (min-width: $screen-sm) {
+    padding-bottom: 68px;
+  }
+
   &__hints {
     list-style: none;
     margin: 0;
     padding: 40px 20px;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.05);
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
   }
 
   &__hint {
@@ -20,6 +32,13 @@
     line-height: 25px;
     font-weight: 500;
 
+    @media (min-width: $screen-sm) {
+      margin: 0;
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+
     &::before {
       content: '01';
       text-align: center;
@@ -29,8 +48,12 @@
       width: 25px;
       height: 25px;
       font-size: 11px;
-      border: 1px solid #FC364D;
-      border-radius: 50%;
+
+      @media (min-width: $screen-sm) {
+        width: 35px;
+        height: 35px;
+        font-size: 13px;
+      }
     }
 
     &--second::before {
@@ -40,6 +63,25 @@
     &--third::before {
       content: '03';
     }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #FC364D;
+      border-radius: 50%;
+
+      @media (min-width: $screen-sm) {
+        width: 35px;
+        height: 35px;
+        top: -6px;
+        left: -1px;
+        border: 2px solid #FC364D;
+      }
+    }
   }
 
 
@@ -48,6 +90,10 @@
     padding: 60px 20px 50px;
     min-height: 683px;
     background-color: rgba(87, 192, 191, 0.08);
+
+    @media (min-width: $screen-sm) {
+      min-height: 500px;
+    }
   }
 
   &__back {
@@ -61,6 +107,14 @@
     color: #000;
     cursor: pointer;
 
+    @media (min-width: $screen-sm) {
+      min-width: 140px;
+      padding-left: 59px;
+      margin-right: 11px;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -72,11 +126,23 @@
       background-repeat: no-repeat;
       background-size: 30px;
       transition: 0.3s;
+
+      @media (min-width: $screen-sm) {
+        top: 5px;
+        width: 45px;
+        background-size: 45px;
+      }
     }
 
     &:hover::before {
       background-size: 35px;
       width: 35px;
+
+      @media (min-width: $screen-sm) {
+        width: 50px;
+        background-size: 50px;
+        height: 12px;
+      }
     }
 
     &--disabled {
@@ -90,6 +156,11 @@
       &:hover::before {
         background-size: 30px;
         width: 30px;
+
+        @media (min-width: $screen-sm) {
+          width: 45px;
+          background-size: 45px;
+        }
       }
     }
   }

@@ -152,6 +152,7 @@ $(document).ready(function(){
   }
   else {
     $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+    $('.activities__header').html('Миссия');
   }
   $(".slider__sliced").trigger("start_quot");
 
@@ -178,8 +179,18 @@ $(document).ready(function(){
 
   $('.activities__head').on ('click', function() {
 
-    $(this).toggleClass('activities__head--opened').next().slideToggle();
-    $('.activities__head').not(this).removeClass('activities__head--opened').next().slideUp();
+    if ($(window).width() < '768') {
+      $(this).toggleClass('activities__head--opened').next().slideToggle();
+      $('.activities__head').not(this).removeClass('activities__head--opened').next().slideUp();
+    }
+    else {
+      $(this).addClass('activities__head--opened').next().show('slow');
+      $('.activities__head').not(this).removeClass('activities__head--opened').next().hide();
+      $('.activities__header').html($(this).children().text());
+
+    }
+
+
   })
 
   $('.form__step-one').on('change', function() {

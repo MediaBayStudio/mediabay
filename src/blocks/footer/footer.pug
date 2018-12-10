@@ -3,13 +3,15 @@ mixin footer()
     a.footer__wrapper(href='/index.html')
       svg.footer__logo(width="90", height="22")
         use(xlink:href="img/sprite-svg.svg#header-logo")
-    div.footer__links
-      +footer-nav('')
-      a.footer__phone(href='tel:+78123326872') +7 812 332-68-72
-    div.footer__mail
-      a(href='mailto:mediabaystudio@gmail.com') mediabaystudio@gmail.com
-    div.footer__address Санкт-Петербург, пр. Обуховской обороны, д. 86, лит. М, БЦ «Квартал», офис 509.
+    div.footer__contacts
+      div.footer__links
+        +footer-nav('')
+        a.footer__phone(href='tel:+78123326872') +7 812 332-68-72
+      div.footer__mail
+        a(href='mailto:mediabaystudio@gmail.com') mediabaystudio@gmail.com
+      div.footer__address Санкт-Петербург, пр. Обуховской обороны, д. 86, лит. М, БЦ «Квартал», офис 509.
     div.footer__soc
+      p.footer__copy © 2018 Студия Media bay. Все права защищены
       ul.footer__socials
         li.footer__social.footer__social--vk
           a(href='#')
@@ -26,7 +28,7 @@ mixin footer()
             svg(width="20", height="20")
               use(xlink:href="img/sprite-svg.svg#instagram")
             span.visually-hidden Instagram
-
+      a.footer__conf(href='#') Политика конфиденциальности
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
     script(src='/js/script.min.js')
     script(src='/slick/slick.js')

@@ -16,6 +16,28 @@
     margin-left: -90px;
     background-color: #fff;
     top: -10px;
+
+    @media (min-width: $screen-sm) {
+      width: 154px;
+      left: 50%;
+      margin-left: -77px;
+      top: -15px;
+    }
+
+    &__logo {
+      @media (min-width: $screen-sm) {
+        width: 95px;
+        height: 29px;
+      }
+    }
+  }
+
+  &__contacts {
+    @media (min-width: $screen-sm) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
   }
 
   &__links {
@@ -24,6 +46,9 @@
     margin-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
+
+    @media (min-width: $screen-sm) {
+    }
   }
 
   &__list {
@@ -74,10 +99,20 @@
     line-height: 15px;
     color: #000;
     text-align: center;
+
+    @media (min-width: $screen-sm) {
+      text-align: left;
+    }
   }
 
   &__soc {
     border-top: 1px solid rgba(196, 196, 196, 0.6);
+
+    @media (min-width: $screen-sm) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
   }
 
   &__socials {
@@ -89,8 +124,42 @@
     align-items: center;
     justify-content: space-between;
 
+    @media (min-width: $screen-sm) {
+      max-width: unset;
+      padding-left: 0;
+      padding-right: 0;
+      width: 70%;
+    }
+
     svg {
       fill: #8AC2C2;
+    }
+  }
+
+  &__copy {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: block;
+      margin: 0;
+      padding: 0;
+      padding-left: 20px;
+      font-size: 10px;
+    }
+  }
+
+  &__conf {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      margin: 0;
+      padding: 0;
+      padding-left: 20px;
+      display: block;
+      font-size: 11px;
+      color: #000;
+      text-decoration: none;
+      //border-bottom: 1px solid #81D9D9;
     }
   }
 }
