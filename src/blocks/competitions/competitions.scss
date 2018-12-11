@@ -12,6 +12,16 @@
     margin-bottom: 62px;
   }
 
+  @media (min-width: $screen-md) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: minmax(60px, auto);
+    grid-column-gap: 40px;
+    margin-left: 40px;
+    margin-bottom: 35px;
+    margin-right: 40px;
+  }
+
   &__header {
     margin: 0;
     margin-bottom: 17px;
@@ -24,6 +34,12 @@
       font-size: 28px;
       line-height: 35px;
       margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 36px;
+      line-height: 45px;
+      margin-bottom: 0;
     }
   }
 
@@ -39,6 +55,14 @@
       line-height: 25px;
       max-width: calc(60% + 40px);
     }
+
+    @media (min-width: $screen-md) {
+      max-width: 100%;
+      margin-top: 25px;
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 25px;
+    }
   }
 
   &__table {
@@ -49,6 +73,14 @@
     @media (min-width: $screen-sm) {
       width: calc(60% + 40px);
       max-width: 600px;
+    }
+
+    @media (min-width: $screen-md) {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      width: 100%;
     }
 
     tr {

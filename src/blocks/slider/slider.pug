@@ -4,6 +4,8 @@ mixin slider()
       section.slider__item
         figure.slider__sliced
           picture
+            source(media='(min-width: 1000px)' srcset='/img/main-slider-1--md.webp' type='image/webp' )
+            source(media='(min-width: 1000px)' srcset='/img/main-slider-1--md.jpg' )
             source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.webp' type='image/webp' )
             source(media='(min-width: 768px)' srcset='/img/main-slider-1--sm.jpg' )
             source(srcset='/img/main-slider-1--xs.webp' type='image/webp')

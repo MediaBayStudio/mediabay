@@ -1,8 +1,8 @@
 svg4everybody(); // иницализация полифила для IE
 (function($, window) {
   var _defaults = {
-    x: 2, // number of tiles in x axis
-    y: 2, // number of tiles in y axis
+    x: 5, // number of tiles in x axis
+    y: 7, // number of tiles in y axis
     random: true, // animate tiles in random order
     speed: 2000 // time to clear all times
   };
@@ -92,10 +92,10 @@ svg4everybody(); // иницализация полифила для IE
       // Public method
       $container.on("start_quot", function() {
         setInterval(function() {
-          var i = randomInteger(0, 48);
+          var i = randomInteger(0, n_tiles);
           var num = 0; // считаем, сколько квадратов у нас всего
           var elems = []; // сохраняем видимые квадраты
-           for (var n = 0; n<48; n++) {
+           for (var n = 0; n<n_tiles; n++) {
              if( $tiles[n].hasClass('tile-animated') ) {
                num = num+1;
                elems.push(n);
@@ -134,9 +134,15 @@ $(window).load(function() {
       if ($(window).width() < '768') {
         $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
       }
-      else {
-        $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
-      }
+      else
+        if (($(window).width() >= '768') && ($(window).width() < '1000')) {
+          $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+          $('.activities__header').html('Миссия');
+        }
+        else {
+          $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
+          $('.activities__header').html('Миссия');
+        }
 
       $(".slider__sliced").trigger("start_quot");
     }, 500);
@@ -150,10 +156,15 @@ $(document).ready(function(){
   if ($(window).width() < '768') {
     $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
   }
-  else {
-    $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
-    $('.activities__header').html('Миссия');
-  }
+  else
+    if (($(window).width() >= '768') && ($(window).width() < '1000')) {
+      $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+      $('.activities__header').html('Миссия');
+    }
+    else {
+      $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
+      $('.activities__header').html('Миссия');
+    }
   $(".slider__sliced").trigger("start_quot");
 
   //задаем анимацию фона для таблицы компетенций

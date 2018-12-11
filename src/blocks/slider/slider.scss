@@ -11,6 +11,10 @@
     margin-bottom: 10px;
   }
 
+  @media (min-width: $screen-md) {
+    margin-top: -90px;
+  }
+
   &__promo {
     margin: 0;
     margin-bottom: 65px !important;
@@ -32,9 +36,19 @@
         bottom: 150px;
       }
 
+      @media (min-width: $screen-md)  {
+        left: 34px;
+        bottom: 168px;
+      }
+
       li {
         width: 30px;
         height: 30px;
+
+        @media (min-width: $screen-md)  {
+          width: 40px;
+          height: 35px;
+        }
 
         button {
           &:before {
@@ -46,6 +60,11 @@
             @media (min-width: $screen-sm) {
               font-size: 7px;
             }
+
+            @media (min-width: $screen-md)  {
+              height: 35px;
+              width: 35px;
+            }
           }
         }
 
@@ -56,6 +75,10 @@
 
             @media (min-width: $screen-sm) {
               border-width: 2px;
+            }
+
+            @media (min-width: $screen-md)  {
+              line-height: 34px;
             }
         }
       }
@@ -123,6 +146,11 @@
           width: 93px;
         }
 
+        @media (min-width: $screen-md) {
+          width: 100px;
+          height: 100px;
+          bottom: -51px;
+        }
 
         &:hover {
           background-size: 50px;
@@ -177,6 +205,38 @@
       @media (min-width: 928px) {
         right: 373px;
       }
+
+      @media (min-width: $screen-md) {
+        right: 300px;
+      }
+
+      @media (min-width: 1024px) {
+        right: 307px;
+      }
+
+      @media (min-width: 1050px) {
+        right: 315px;
+      }
+
+      @media (min-width: 1080px) {
+        right: 323px;
+      }
+
+      @media (min-width: 1110px) {
+        right: 333px;
+      }
+
+      @media (min-width: 1170px) {
+        right: 350px;
+      }
+
+      @media (min-width: 1220px) {
+        right: 369px;
+      }
+
+      @media (min-width: 1280px) {
+        right: 384px;
+      }
     }
 
     .slick-next {
@@ -217,15 +277,51 @@
         @media (min-width: 928px) {
           right: 280px;
         }
+
+        @media (min-width: $screen-md) {
+          right: 200px;
+        }
+
+        @media (min-width: 1020px) {
+          right: 204px;
+        }
+
+        @media (min-width: 1050px) {
+          right: 210px;
+        }
+        @media (min-width: 1080px) {
+          right: 216px;
+        }
+
+        @media (min-width: 1110px) {
+          right: 224px;
+        }
+
+        @media (min-width: 1170px) {
+          right: 234px;
+        }
+
+        @media (min-width: 1220px) {
+          right: 244px;
+        }
+
+        @media (min-width: 1280px) {
+          right: 256px;
+        }
     }
   }
 
   &__item {
+
     @media (min-width: $screen-sm) {
       position: relative;
       display: grid!important;
       grid-template-columns: minmax(288px,464px) minmax(480px, 560px);
       align-items: center;
+    }
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: minmax(460px, 800px) minmax(460px, 640px);
     }
   }
 
@@ -267,6 +363,13 @@
       top: -109px;
     }
 
+    @media (min-width: $screen-md) {
+      font-size: 45px;
+      line-height: 65px;
+      left: 38px;
+      top: -108px;
+    }
+
     &::before {
       content: '01';
       position: absolute;
@@ -278,6 +381,12 @@
       @media (min-width: $screen-sm) {
         top: -20px;
         font-size: 87px;
+      }
+
+      @media (min-width: $screen-md) {
+        top: -44px;
+        left: 2px;
+        font-size: 137px;
       }
     }
 
@@ -324,6 +433,13 @@
       left: 20px;
       right: 0px;
     }
+
+    @media (min-width: $screen-md) {
+      font-size: 26px;
+      line-height: 65px;
+      left: 40px;
+      top: -61px;
+    }
   }
 
   &__lead {
@@ -345,6 +461,15 @@
       min-width: 350px;
       max-width: 450px;
     }
+
+    @media (min-width: $screen-md) {
+      font-size: 17px;
+      line-height: 30px;
+      top: 19px;
+      left: 40px;
+      min-width: 500px;
+      max-width: 650px;
+    }
   }
 
   &__divider {
@@ -359,6 +484,13 @@
       position: relative;
       top: -80px;
       margin-right: 52%;
+    }
+
+    @media (min-width: $screen-md)  {
+      min-width: 600px;
+      max-width: 1400px;
+      height: 100px;
+      top: -100px;
     }
 
     @media (min-width: 788px) {
@@ -415,10 +547,29 @@
       margin-right: 47%;
     }
 
-    @media (min-width: 1008px) {
-      margin-right: 46%;
+    @media (min-width: $screen-md) {
+      margin-right: 40%;
     }
 
+    @media (min-width: 1300px) {
+      margin-right: 39%;
+    }
+
+    @media (min-width: 1335px) {
+      margin-right: 38%;
+    }
+
+    @media (min-width: 1380px) {
+      margin-right: 37%;
+    }
+
+    @media (min-width: 1410px) {
+      margin-right: 36%;
+    }
+
+    @media (min-width: 1430px) {
+      margin-right: 35%;
+    }
 
   }
 

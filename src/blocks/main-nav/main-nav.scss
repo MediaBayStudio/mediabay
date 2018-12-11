@@ -26,6 +26,11 @@
         font-size: 13px;
         line-height: 1;
       }
+
+      @media (min-width: $screen-md) {
+        font-size: 15px;
+        line-height: 1;
+      }
     }
 
     &:hover {
