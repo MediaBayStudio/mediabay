@@ -125,14 +125,14 @@ mixin forms()
         div.form__answers
           p
             input(type='radio' name='system-name' id='yandex' value='yandex').form__radios
-            label.form__select-type(for='yandex')
+            label.form__label(for='yandex')
               svg.form__icon.form__icon--design(width="35", height="30")
                 use(xlink:href="img/sprite-svg.svg#design")
               span Яндекс.Директ
 
           p
             input(type='radio' name='system-name' id='google' value='google').form__radios
-            label.form__select-type(for='google')
+            label.form__label(for='google')
               svg.form__icon.form__icon--design(width="35", height="30")
                 use(xlink:href="img/sprite-svg.svg#conversion")
               span Google AdWords

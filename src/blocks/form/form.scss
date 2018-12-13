@@ -9,6 +9,12 @@
     padding-left: 16px;
   }
 
+  @media (min-width: $screen-md) {
+    padding-top: 105px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   &__step-title {
     margin: 0;
     margin-bottom: 19px;
@@ -22,6 +28,12 @@
       margin-bottom: 15px;
       font-size: 33px;
       line-height: 50px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 45px;
     }
   }
 
@@ -60,6 +72,11 @@
           margin-left: 0;
         }
       }
+
+      @media (min-width: $screen-md) {
+        width: 25%;
+        max-width: 200px;
+      }
     }
 
     .form__label {
@@ -85,6 +102,13 @@
         line-height: 15px;
       }
 
+      @media (min-width: $screen-md) {
+        min-height: 200px;
+        padding-top: 50px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
       svg {
         fill: #5FBFCD;
         margin-right: 30px;
@@ -94,6 +118,11 @@
         @media (min-width: $screen-sm)  {
           margin: 0;
           margin-bottom: 20px;
+        }
+
+        @media (min-width: $screen-md) {
+          width: 50px;
+          height: 45px;
         }
       }
     }
@@ -131,6 +160,11 @@
           width: 100%;
           margin-left: 0;
           margin-right: 0;
+        }
+
+        @media (min-width: $screen-md) {
+          width: 100%;
+          max-width: unset;
         }
       }
     }

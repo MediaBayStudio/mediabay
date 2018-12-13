@@ -26,11 +26,10 @@
 
   @media (min-width: $screen-md) {
     min-height: 455px;
-    margin-top: 64px; //временно пока не отстилизован слайдер потом убрать
     margin-bottom: 110px;
     padding-left: 100px;
     padding-top: 73px;
-    background-size: 23% 100%;
+    background-size: 24% 100%;
   }
 
   &__header {
