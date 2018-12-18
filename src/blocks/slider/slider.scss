@@ -16,6 +16,11 @@
     margin-bottom: 111px;
   }
 
+  @media (min-width: $screen-lg) {
+    height: 800px; // временная мера убрать после стилизации
+    margin-bottom: 130px;
+  }
+
   &__promo {
     margin: 0;
     margin-bottom: 65px !important;
@@ -42,6 +47,12 @@
         bottom: 168px;
       }
 
+      @media (min-width: $screen-lg) {
+        left: 96px;
+        bottom: 300px;
+        width: calc(100% - 100px);
+      }
+
       li {
         width: 30px;
         height: 30px;
@@ -50,6 +61,8 @@
           width: 40px;
           height: 35px;
         }
+
+
 
         button {
           &:before {
@@ -371,6 +384,11 @@
       top: -108px;
     }
 
+    @media (min-width: $screen-lg) {
+      left: 100px;
+      top: -163px;
+    }
+
     &::before {
       content: '01';
       position: absolute;
@@ -441,6 +459,11 @@
       left: 40px;
       top: -61px;
     }
+
+    @media (min-width: $screen-lg) {
+      left: 100px;
+      top: -107px;
+    }
   }
 
   &__lead {
@@ -470,6 +493,16 @@
       left: 40px;
       min-width: 500px;
       max-width: 650px;
+    }
+
+    @media (min-width: $screen-lg) {
+      left: 100px;
+      top: -20px;
+      font-size: 18px;
+      line-height: 35px;
+      min-width: unset;
+      max-width: none;
+      width: 530px;
     }
   }
 

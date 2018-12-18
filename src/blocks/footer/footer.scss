@@ -10,6 +10,11 @@
     margin-right: 40px;
   }
 
+  @media (min-width: $screen-lg) {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
   &__wrapper {
     position: relative;
     box-sizing: border-box;
@@ -32,6 +37,11 @@
     @media (min-width: $screen-md) {
       margin-left: -82px;
     }
+
+    @media (min-width: $screen-lg) {
+      width: 192px;
+      margin-left: -92px;
+    }
   }
 
   &__logo {
@@ -42,6 +52,10 @@
 
     @media (min-width: $screen-md) {
       width: 105px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 130px;
     }
   }
 
@@ -56,6 +70,11 @@
       padding-top: 4px;
       padding-bottom: 36px;
     }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 12px;
+      padding-bottom: 28px;
+    }
   }
 
   &__links {
@@ -69,6 +88,10 @@
       padding-left: 0;
       padding-right: 0;
     }
+
+    @media (min-width: $screen-lg) {
+      grid-column-gap: 60px;
+    }
   }
 
   &__list {
@@ -78,6 +101,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media (min-width: $screen-lg) {
+      justify-content: space-between;
+    }
   }
 
   &__item {
@@ -91,6 +118,10 @@
       @media (min-width: $screen-md) {
         font-size: 14px;
       }
+
+      @media (min-width: $screen-lg) {
+        font-size: 15px;
+      }
     }
   }
 
@@ -99,6 +130,10 @@
     font-size: 13px;
     color: #000;
     text-decoration: none;
+
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+    }
   }
 
   &__mail {
@@ -112,6 +147,10 @@
       color: #000;
       text-decoration: none;
       border-bottom: 1px solid #81D9D9;
+
+      @media (min-width: $screen-lg) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -134,6 +173,11 @@
       font-size: 13px;
       line-height: 20px;
     }
+
+    @media (min-width: $screen-lg) {
+      font-size: 14px;
+      margin-left: 55px;
+    }
   }
 
   &__soc {
@@ -144,6 +188,11 @@
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
     }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 10px;
+    }
+
   }
 
   &__socials {
@@ -164,6 +213,10 @@
 
     @media (min-width: $screen-md) {
       width: 55%;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 44%;
     }
 
     svg {
@@ -210,6 +263,10 @@
       padding: 0;
       font-size: 13px;
     }
+
+    @media (min-width: $screen-lg) {
+      font-size: 14px;
+    }
   }
 
   &__conf {
@@ -230,6 +287,11 @@
     @media (min-width: $screen-md) {
       margin-left: 0;
       font-size: 13px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 14px;
+      margin-left: 55px;
     }
   }
 }

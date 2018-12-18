@@ -30,6 +30,10 @@
     @media (min-width: $screen-md) {
       padding: 45px 0 40px;
     }
+
+    @media (min-width: $screen-lg) {
+      padding: 57px 0 50px;
+    }
   }
 
   &__hint {
@@ -53,6 +57,11 @@
       font-weight: 500;
     }
 
+    @media (min-width: $screen-lg) {
+      font-size: 18px;
+      line-height: 35px;
+    }
+
     &::before {
       content: '01';
       text-align: center;
@@ -72,6 +81,11 @@
       @media (min-width: $screen-md) {
         left: -9px;
         font-size: 14px;
+      }
+
+      @media (min-width: $screen-lg) {
+        left: -15px;
+        font-size: 16px;
       }
 
     }
@@ -106,6 +120,13 @@
         top: -1px;
         left: -10px;
       }
+
+      @media (min-width: $screen-lg) {
+        width: 45px;
+        height: 45px;
+        top: -6px;
+        left: -20px;
+      }
     }
   }
 
@@ -122,6 +143,10 @@
 
     @media (min-width: $screen-md) {
       min-height: 620px;
+    }
+
+    @media (min-width: $screen-lg) {
+      min-height: 680px;
     }
   }
 

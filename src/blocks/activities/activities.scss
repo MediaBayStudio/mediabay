@@ -32,6 +32,13 @@
     background-size: 24% 100%;
   }
 
+  @media (min-width: $screen-lg) {
+    min-height: 490px;
+    margin-bottom: 125px;
+    margin-left: 100px;
+    background-size: 27% 100%;
+  }
+
   &__header {
     margin: 0;
     margin-bottom: 25px;
@@ -53,6 +60,10 @@
       font-size: 36px;
       line-height: 45px;
     }
+
+    @media (min-width: $screen-lg) {
+      margin-left: 140px;
+    }
   }
 
   &__list {
@@ -73,6 +84,12 @@
       margin-top: -60px;
       margin-right: 88px;
       height: 330px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-right: 130px;
+      margin-top: -70px;
+      height: 360px;
     }
   }
 
@@ -156,6 +173,11 @@
       padding-bottom: 3px;
       font-size: 16px;
     }
+
+    @media (min-width: $screen-lg) {
+      font-size: 17px;
+      line-height: 25px;
+    }
   }
 
   &__toggle {
@@ -183,6 +205,11 @@
       width: 51%;
     }
 
+    @media (min-width: $screen-lg) {
+      left: 240px;
+      width: 47%;
+    }
+
     p {
       margin: 0;
       margin-top: 15px;
@@ -198,6 +225,12 @@
 
       @media (min-width: $screen-md) {
         font-size: 16px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-top: 27px;
+        font-size: 17px;
+        line-height: 30px;
       }
     }
   }

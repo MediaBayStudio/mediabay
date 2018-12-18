@@ -23,6 +23,11 @@
     max-width: 400px;
   }
 
+  @media (min-width: $screen-lg) {
+    max-width: 480px;
+    padding-left: 100px;
+  }
+
   &__wrapper {
     position: relative;
 
@@ -67,6 +72,10 @@
        width: 130px;
        height: 40px;
        margin-top: -12px;
+     }
+
+     @media (min-width: $screen-lg) {
+       width: 143px;
      }
 
   }

@@ -15,6 +15,12 @@
     padding-right: 40px;
   }
 
+  @media (min-width: $screen-lg) {
+    padding-top: 73px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
   &__step-title {
     margin: 0;
     margin-bottom: 19px;
@@ -34,6 +40,10 @@
       margin-bottom: 50px;
       font-size: 36px;
       line-height: 45px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 37px;
     }
   }
 
@@ -77,6 +87,10 @@
         width: 25%;
         max-width: 200px;
       }
+
+      @media (min-width: $screen-lg) {
+        max-width: 280px;
+      }
     }
 
     .form__label {
@@ -107,6 +121,15 @@
         padding-top: 50px;
         font-size: 14px;
         line-height: 20px;
+      }
+
+      @media (min-width: $screen-lg) {
+        min-height: 250px;
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 17px;
+        line-height: 25px;
       }
 
       svg {
