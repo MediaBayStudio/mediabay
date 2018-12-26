@@ -1,0 +1,27 @@
+mixin contacts()
+  section.contacts
+    h2.contacts__header Контакты
+    p.contacts__lead Мы любим знакомиться! Напишите нам, позвоните или просто оставьте свои данные, чтобы обсудить задачу.
+    div.form__step.contacts__form
+      div.form__answers.form__answers--four
+        p.form__fields
+          input.form__name(type='text' placeholder='Представьтесь')
+        p.form__fields
+          input.form__phone(type='phone' placeholder='Номер телефона')
+        p.form__fields
+          input.form__mail(type='email' placeholder='E-mail')
+        p.form__fields--agree
+          input.form__agree(type='checkbox' id='agreeded')
+          label.form__agree--label(for='agreeded') Принимаю соглашение об использовании персональных данных
+        p.form__fields
+          input.form__send(type='submit' value='Отправить')
+    ul.contacts__list
+      li.contacts__item
+        h3.contacts__title Адрес
+        p.contacts__text Санкт-Петербург, пр. Обуховской обороны, д. 86, лит. М, БЦ «Квартал», офис 509.
+      li.contacts__item
+        h3.contacts__title ТЕЛЕФОН
+        a.contacts__text(href="#") +7 812 332-68-72
+      li.contacts__item
+        h3.contacts__title Е-MAIL
+        a.contacts__text(href="#") mediabaystudio@gmail.com

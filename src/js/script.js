@@ -140,8 +140,13 @@ $(window).load(function() {
           $('.activities__header').html('Миссия');
         }
         else {
-          $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
-          $('.activities__header').html('Миссия');
+          if ( ($(window).width() >= '1000') && ($(window).width() < '1440') ) {
+            $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
+            $('.activities__header').html('Миссия');
+          }
+          else {
+            $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
+          }
         }
 
       $(".slider__sliced").trigger("start_quot");
@@ -162,8 +167,13 @@ $(document).ready(function(){
       $('.activities__header').html('Миссия');
     }
     else {
-      $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
-      $('.activities__header').html('Миссия');
+      if ( ($(window).width() >= '1000') && ($(window).width() < '1440') ) {
+        $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
+        $('.activities__header').html('Миссия');
+      }
+      else {
+        $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
+      }
     }
   $(".slider__sliced").trigger("start_quot");
 
@@ -177,13 +187,41 @@ $(document).ready(function(){
   $('.slider__promo').slick({
     infinite: true,
     arrows: true,
+    mobileFirst: true,
     dots: true
   });
 
   $('.slider__projects').slick({
     infinite: true,
     arrows: true,
+    mobileFirst: true,
     dots: true
+  });
+
+  $('.slider__comand').slick({
+    infinite: true,
+    arrows: true,
+    mobileFirst: true,
+    dots: false,
+    responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            centerMode: false,
+            focusOnSelect:true,
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 1023,
+          settings: {
+            centerMode: false,
+            focusOnSelect:true,
+            slidesToShow: 2,
+          }
+        }
+      ]
+
   });
 
   $('.activities__text:not(:first)').hide();
