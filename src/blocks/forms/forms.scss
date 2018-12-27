@@ -28,11 +28,12 @@
     }
 
     @media (min-width: $screen-md) {
-      padding: 45px 0 40px;
+      padding: 45px 40px 40px;
+      justify-content: flex-start; // подсказки прибиваем влево, нецентруем
     }
 
     @media (min-width: $screen-lg) {
-      padding: 57px 0 50px;
+      padding: 57px 100px 50px;
     }
   }
 
@@ -52,12 +53,14 @@
     }
 
     @media (min-width: $screen-md) {
+      margin-right: 97px; // подсказки прибиваем влево, нецентруем
       font-size: 16px;
       line-height: 35px;
       font-weight: 500;
     }
 
     @media (min-width: $screen-lg) {
+      margin-right: 174px;
       font-size: 18px;
       line-height: 35px;
     }

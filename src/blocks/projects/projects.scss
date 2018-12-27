@@ -92,6 +92,7 @@
     padding: 0 20px;
 
     @media (min-width: $screen-sm) {
+      max-width: 720px;
       position: absolute;
       padding: 40px 50px 100px 100px;
       left: 70px;
@@ -101,12 +102,14 @@
     }
 
     @media (min-width: $screen-md) {
+      max-width: 1050px;
       left: 40px;
       right: 215px;
       padding: 59px 60px 100px 122px;
     }
 
     @media (min-width: $screen-lg) {
+      max-width: 1250px;
       left: 100px;
       right: 340px;
       padding-top: 82px;

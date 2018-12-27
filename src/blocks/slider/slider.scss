@@ -343,7 +343,7 @@
       grid-template-columns: minmax(460px, 800px) minmax(460px, 640px);
     }
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
       grid-template-columns: minmax(600px, 1000px) minmax(840px, 1000px);
     }
   }
@@ -590,7 +590,7 @@
       margin-right: 47%;
     }
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
       min-width: 540px;
       max-width: 1200px;
       margin-right: 60%;

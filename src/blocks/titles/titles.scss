@@ -19,8 +19,28 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 70px;
     grid-column-gap: 40px;
+    background-size: 440px 580px;
     background-image: url('../img/titles__back--sm.png');
+  }
 
+  @media (min-width: $screen-md) {
+    margin-top: 50px;
+    margin-bottom: 157px;
+    padding-top: 131px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-size: contain; // временная мера?
+    background-image: url('../img/titles__back--md.png');
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-top: 12px;
+    margin-bottom: 133px;
+    padding-top: 160px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-size: 600px 600px;
+    background-image: url('../img/titles__back--lg.png');
   }
 
   &__header {
@@ -35,6 +55,12 @@
       margin-bottom: 10px;
       font-size: 36px;
       line-height: 50px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+      font-size: 45px;
+      line-height: 65px;
     }
   }
 
@@ -51,6 +77,16 @@
       grid-column-end: 2;
       line-height: 25px;
     }
+
+    @media (min-width: $screen-md) {
+      margin-top: 40px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 28px;
+    }
   }
 
   &__list {
@@ -65,6 +101,14 @@
       grid-column-start: 2;
       grid-column-end: 3;
     }
+
+    @media (min-width: $screen-md) {
+      padding-top: 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 8px;
+    }
   }
 
   &__item {
@@ -74,9 +118,17 @@
     margin-bottom: 18px;
 
     @media (min-width: $screen-sm) {
-      //margin-left: 16px;
       margin-bottom: 25px;
       padding-left: 80px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 36px;
+      padding-left: 90px;
     }
 
     &::before {
@@ -92,6 +144,17 @@
         width: 60px;
       }
 
+      @media (min-width: $screen-md)  {
+        left: -12px;
+        top: 15px;
+      }
+
+      @media (min-width: $screen-lg)  {
+        height: 3px;
+        left: 0;
+        top: 11px;
+      }
+
     }
   }
 
@@ -101,6 +164,15 @@
 
     @media (min-width: $screen-sm) {
       margin-bottom: 10px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 11px;
     }
   }
 
@@ -113,6 +185,11 @@
 
     @media (min-width: $screen-sm) {
       line-height: 20px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 15px;
+      line-height: 25px;
     }
   }
 

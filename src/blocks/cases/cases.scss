@@ -154,6 +154,7 @@
     max-width: 600px;
 
     @media (min-width: $screen-sm) {
+      width: calc(100% - 280px);
       margin-top: 10px;
       margin-right: 0;
       margin-bottom: 0;
@@ -163,6 +164,7 @@
     }
 
     @media (min-width: $screen-md) {
+      width: unset;
       margin-left: 120px;
       font-size: 16px;
     }

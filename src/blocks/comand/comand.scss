@@ -16,20 +16,42 @@
     padding-left: 0;
     padding-right: 0;
     margin-top: 127px;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 130px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 90px;
   }
 
   &::before {
     @media (min-width: $screen-sm) {
-      content: 'media bay';
+      content: '';
       position: absolute;
-      top: -125px;
-      left: 5px;
+      height: 225px;
+      top: -80px;
+      left: 20px;
       right: 0;
-      font-size: 160px;
-      line-height: 240px;
-      font-weight: 500;
-      color: rgba(14, 43, 148, 0.04);
-      text-transform: lowercase;
+      background-image: url("../img/media bay.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 300px;
+      left: 40px;
+      background-size: 97%;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 370px;
+      left: 100px;
+      top: -112px;
+      background-size: 93%;
     }
   }
 
@@ -45,30 +67,74 @@
       font-size: 28px;
       line-height: 35px;
     }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 65px;
+      padding-left: 40px;
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 85px;
+      padding-left: 100px;
+    }
   }
 
   &__list {
     position: relative;
     margin: 0;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     list-style: none;
     box-shadow: 0px 4px 50px rgba(0, 27, 171, 0.05);
 
     @media (min-width: $screen-sm) {
+      max-width: 768px;
       padding-left: 50px;
       padding-right: 50px;
       box-shadow: none;
+    }
+
+    @media (min-width: $screen-md) {
+      max-width: 1024px;
+      padding-left: 130px;
+      padding-right: 130px;
+    }
+
+    @media (min-width: $screen-lg)  {
+      max-width: 1440px;
+      padding-left: 220px;
+      padding-right: 220px;
     }
 
     .slick-list {
       @media (min-width: $screen-sm) {
         margin: 0 -20px;
       }
+
+      @media (min-width: $screen-md) {
+        margin: 0 -50px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin: 0 -60px;
+      }
     }
 
     .slick-slide {
       @media (min-width: $screen-sm) {
         margin: 0 20px;
+      }
+
+      @media (min-width: $screen-md) {
+        margin: 0 50px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin: 0 60px;
       }
     }
   }
@@ -86,6 +152,16 @@
       background-size: 110px 380px;
       box-shadow: 0px 4px 50px rgba(0, 27, 171, 0.05);
     }
+
+    @media (min-width: $screen-md) {
+      padding: 60px 60px 0;
+      background-size: 140px 390px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 80px 80px 0;
+      background-size: 160px 510px;
+    }
   }
 
   &__name {
@@ -101,6 +177,15 @@
       margin-bottom: 7px;
       font-size: 22px;
     }
+
+    @media (min-width: $screen-md)  {
+      font-size: 25px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 14px;
+      margin-top: 57px;
+    }
   }
 
   &__prof {
@@ -112,6 +197,11 @@
     @media (min-width: $screen-sm) {
       margin-bottom: 20px;
       font-size: 16px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 17px;
+      line-height: 30px;
     }
   }
 
@@ -125,6 +215,18 @@
 
     @media (min-width: $screen-sm) {
       line-height: 25px;
+    }
+
+    @media (min-width: $screen-md)  {
+      padding-bottom: 65px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 30px;
+      padding-bottom: 90px;
+      font-size: 17px;
+      line-height: 30px;
     }
   }
 
@@ -150,6 +252,19 @@
         background-size: 60px;
       }
 
+      @media (min-width: $screen-md)  {
+        background-color: transparent;
+        right: 37px;
+        bottom: 43%;
+      }
+
+      @media (min-width: $screen-lg) {
+        right: 100px;
+        bottom: 41%;
+        width: 65px;
+        height: 65px;
+      }
+
       &:hover {
         width: 50px;
         background-size: 50px;
@@ -157,6 +272,11 @@
         @media (min-width: $screen-sm) {
           width: 65px;
           background-size: 65px;
+        }
+
+        @media (min-width: $screen-lg)  {
+          width: 70px;
+          background-size: 70px;
         }
       }
   }
@@ -174,6 +294,15 @@
 
     @media (min-width: $screen-sm)  {
       right: 53%;
+    }
+
+    @media (min-width: $screen-md)  {
+      right: unset;
+      left: 37px;
+    }
+
+    @media (min-width: $screen-lg) {
+      left: 100px;
     }
   }
 
