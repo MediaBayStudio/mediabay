@@ -3,18 +3,20 @@ mixin contacts()
     h2.contacts__header Контакты
     p.contacts__lead Мы любим знакомиться! Напишите нам, позвоните или просто оставьте свои данные, чтобы обсудить задачу.
     div.form__step.contacts__form
-      div.form__answers.form__answers--four
-        p.form__fields
-          input.form__name(type='text' placeholder='Представьтесь')
-        p.form__fields
-          input.form__phone(type='phone' placeholder='Номер телефона')
-        p.form__fields
-          input.form__mail(type='email' placeholder='E-mail')
-        p.form__fields--agree
-          input.form__agree(type='checkbox' id='agreeded')
-          label.form__agree--label(for='agreeded') Принимаю соглашение об использовании персональных данных
-        p.form__fields
-          input.form__send(type='submit' value='Отправить')
+      form(id='form2')
+        div.form__answers.form__answers--four
+          p.form__fields
+            input.form__name(type='text' name='user-name' placeholder='Представьтесь' required)
+          p.form__fields
+            input.form__phone(type='phone' name='user-phone' placeholder='Номер телефона' required)
+          p.form__fields
+            input.form__mail(type='email' name='user-email' placeholder='E-mail' required)
+          p.form__fields--agree
+            input.form__agree(type='checkbox' id='agreeded' required)
+            label.form__agree--label(for='agreeded') Принимаю соглашение об использовании персональных данных
+          p.form__fields
+            input.form__send(type='submit' value='Отправить')
+
     ul.contacts__list
       li.contacts__item
         h3.contacts__title Адрес

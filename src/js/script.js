@@ -459,6 +459,72 @@ $(document).ready(function(){
   })
 
 
+  $('.competitions__table span').on('click', function() {
+    // create the notification
+    var notification = new NotificationFx({
+      wrapper : document.getElementById("competitions"),
+      message : "<h4 class='attache__header'>"+$(this).text()+"</h4><p class='attache__text'>"+$(this).next().text()+"</p>",
+      layout : 'attached',
+      effect : 'bouncyflip',
+      type : 'notice', // notice, warning or error
+      onClose : function() {
+      }
+    });
+
+    // show the notification
+    notification.show();
+  })
+
+  $('.form').submit(function(e) {
+   var $form = $(this);
+   $.ajax({
+      type: 'POST',
+      url: 'feedback.php',
+      data: $form.serialize()
+  }).done(function(result) {
+      $('.modal-mask').addClass('modal-mask--visible');
+      $('.modal__header').text('Заявка принята');
+      $('.modal__text').text('Спасибо за ваш выбор! Здесь текс, который еще нужно придумать');
+      document.getElementById('form1').reset();
+    }).fail(function() {
+      $('.modal-mask').addClass('modal-mask--visible');
+      $('.modal__header').text('Ой, кажется что-то пошло не так');
+      $('.modal__text').text('Позвоните нам или попробуйте отправить письмо позднее');
+    });
+   //отмена действия по умолчанию для кнопки submit
+      e.preventDefault();
+});
+
+$('#form2').submit(function(e) {
+ var $form = $(this);
+ $.ajax({
+    type: 'POST',
+    url: 'send.php',
+    data: $form.serialize()
+  }).done(function(result) {
+      $('.modal-mask').addClass('modal-mask--visible');
+      $('.modal__header').text('Заявка принята');
+      $('.modal__text').text('Спасибо за ваш выбор! Здесь текс, который еще нужно придумать');
+      document.getElementById('form1').reset();
+    }).fail(function() {
+      $('.modal-mask').addClass('modal-mask--visible');
+      $('.modal__header').text('Ой, кажется что-то пошло не так');
+      $('.modal__text').text('Позвоните нам или попробуйте отправить письмо позднее');
+    });
+ //отмена действия по умолчанию для кнопки submit
+    e.preventDefault();
+});
+
+$('.modal__close').on('click', function() {
+  $('.modal-mask').removeClass('modal-mask--visible');
+  document.getElementById('form1').reset();
+  $('.form__step-four').hide();
+  $('#form__step-title').text('Выберите услугу');
+  $('#progress .progress-bar').css('width', '25%');
+  $('#progress').removeClass('step-four');
+  $('.forms__back').addClass('forms__back--disabled');
+  $('.form__step-one').css('display', 'flex');
+})
 
 
 });

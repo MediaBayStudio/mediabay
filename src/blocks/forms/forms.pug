@@ -4,7 +4,7 @@ mixin forms()
       li.forms__hint.forms__hint--first Заполните онлайн-заявку
       li.forms__hint.forms__hint--second Дождитесь нашего ответа
       li.forms__hint.forms__hint--third Наслаждайтесь!
-    form.forms__body.form
+    form.forms__body.form(id='form1')
       h3.form__step-title(id='form__step-title') ВЫБЕРИТЕ УСЛУГУ
       div.form__progress
         a.forms__back.forms__back--disabled Шаг назад
@@ -140,13 +140,13 @@ mixin forms()
       div.form__step.form__step-four.form__step--main
         div.form__answers.form__answers--four
           p.form__fields
-            input.form__name(type='text' placeholder='Представьтесь')
+            input.form__name(type='text'  name='user-name' placeholder='Представьтесь' required)
           p.form__fields
-            input.form__phone(type='phone' placeholder='Номер телефона')
+            input.form__phone(type='phone' name='user-phone' placeholder='Номер телефона' required)
           p.form__fields
-            input.form__mail(type='email' placeholder='E-mail')
+            input.form__mail(type='email' name='user-email' placeholder='E-mail' required)
           p.form__fields--agree
-            input.form__agree(type='checkbox' id='agreeded')
+            input.form__agree(type='checkbox' id='agreeded' required)
             label.form__agree--label(for='agreeded') Принимаю соглашение об использовании персональных данных
           p.form__fields
             input.form__send(type='submit' value='Отправить')

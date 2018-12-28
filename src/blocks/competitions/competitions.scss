@@ -83,6 +83,7 @@
     width: 100%;
     max-width: 400px;
     border-spacing: 0;
+    position: relative;
 
     @media (min-width: $screen-sm) {
       width: calc(60% + 40px);
@@ -121,6 +122,11 @@
     }
   }
 
+  &__name {
+    @media (min-width: $screen-md) {
+      cursor: pointer;
+    }
+  }
 }
 
 .colored {
