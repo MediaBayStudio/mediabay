@@ -173,6 +173,7 @@ $(document).ready(function(){
       }
       else {
         $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
+
       }
     }
   $(".slider__sliced").trigger("start_quot");

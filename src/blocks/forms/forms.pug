@@ -147,6 +147,6 @@ mixin forms()
             input.form__mail(type='email' name='user-email' placeholder='E-mail' required)
           p.form__fields--agree
             input.form__agree(type='checkbox' id='agreeded' required)
-            label.form__agree--label(for='agreeded') Принимаю соглашение об использовании персональных данных
+            label.form__agree--label(for='agreeded') Принимаю #[a(href="/policy.html" target="_blank") соглашение] об использовании персональных данных
           p.form__fields
             input.form__send(type='submit' value='Отправить')

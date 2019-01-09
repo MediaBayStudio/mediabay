@@ -1,0 +1,55 @@
+// В этом файле должны быть стили для БЭМ-блока policy, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.policy {
+
+  $block-name:                &; // #{$block-name}__element
+
+  font-size: 12px;
+  line-height: 20px;
+  max-width: 760px;
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 70px;
+
+  @media (min-width: $screen-md) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-right: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 100px;
+  }
+
+  p, ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    margin-bottom: 30px;
+
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: li;
+  }
+
+  li {
+    margin-bottom: 30px;
+  }
+
+  li:before {
+      color: #FC364D;
+      counter-increment: li;
+      content: counters(li, ".") ". ";
+  }
+
+  &__title {
+    margin: 70px 0 30px;
+  }
+
+}

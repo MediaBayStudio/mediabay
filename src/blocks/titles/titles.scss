@@ -43,6 +43,14 @@
     background-image: url('../img/titles__back--lg.png');
   }
 
+  &--policy {
+    display: block !important;
+    max-width: 760px;
+    padding-right: 0 !important;
+    margin-bottom: 40px !important;
+  }
+
+
   &__header {
     margin: 0;
     margin-bottom: 20px;
