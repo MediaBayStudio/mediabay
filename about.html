@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
+  <title>MediaBay</title>
+  <meta name="MediaBay" content="">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+</script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Media Bay</h1><a class="header__wrapper" href="/index.html"><svg class="header__logo" width="90" height="22"><use xlink:href="img/sprite-svg.svg#header-logo"></use></svg></a>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="/blog.html" title="Кейсы">Кейсы</a></li>
+        <li class="main-nav__item  main-nav__item--active"><a href="/about.html" title="О нас">О нас</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="titles titles--about">
+    <h1 class="titles__header">О нас</h1><span></span>
+  </section>
+  <section class="comand">
+    <h2 class="comand__header">Команда</h2>
+    <ul class="comand__list slider__comand">
+      <li class="comand__item"><img class="comand__img" src="img/photo--1.jpg"/>
+        <h3 class="comand__name">Андрей</h3><span class="comand__prof">Исполнительный директор</span>
+        <p class="comand__lead">Капитан корабля. Делает так, чтобы все были счастливы.</p>
+      </li>
+      <li class="comand__item"><img class="comand__img" src="img/photo--2.jpg"/>
+        <h3 class="comand__name">Оля</h3><span class="comand__prof">Веб-разработчик</span>
+        <p class="comand__lead">Богиня семантической верстки и котиков. Милая, как капибара.</p>
+      </li>
+      <li class="comand__item"><img class="comand__img" src="img/photo--3.jpg"/>
+        <h3 class="comand__name">Лена</h3><span class="comand__prof">UX/UI дизайнер</span>
+        <p class="comand__lead">Отвечает за смысл и красоту. Ненавидит кривую типографику.</p>
+      </li>
+    </ul>
+  </section>
+  <section class="contacts">
+    <h2 class="contacts__header">Контакты</h2>
+    <p class="contacts__lead">Мы любим знакомиться! Напишите нам, позвоните или просто оставьте свои данные, чтобы обсудить задачу.</p>
+    <div class="form__step contacts__form">
+      <form id="form2">
+        <div class="form__answers form__answers--four">
+          <p class="form__fields"><input class="form__name" type="text" name="user-name" placeholder="Представьтесь" required="required"/></p>
+            <p class="form__fields"><input class="form__phone" type="phone" name="user-phone" placeholder="Номер телефона" required="required"/></p>
+              <p class="form__fields"><input class="form__mail" type="email" name="user-email" placeholder="E-mail" required="required"/></p>
+                <p class="form__fields--agree"><input class="form__agree" type="checkbox" id="agreeded" required="required"/><label class="form__agree--label" for="agreeded">Принимаю <a href="/policy.html" target="_blank">соглашение</a> об использовании персональных данных</label></p>
+                <p class="form__fields"><input class="form__send" type="submit" value="Отправить"/></p>
+        </div>
+      </form>
+    </div>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <h3 class="contacts__title">Адрес</h3>
+        <p class="contacts__text">Санкт-Петербург, пр. Обуховской обороны, д. 86, лит. М, БЦ «Квартал», офис 509.</p>
+      </li>
+      <li class="contacts__item">
+        <h3 class="contacts__title">ТЕЛЕФОН</h3><a class="contacts__text" href="#">+7 812 332-68-72</a>
+      </li>
+      <li class="contacts__item">
+        <h3 class="contacts__title">Е-MAIL</h3><a class="contacts__text" href="#">mediabaystudio@gmail.com</a>
+      </li>
+    </ul>
+  </section>
+  <section class="footer"><a class="footer__wrapper" href="/index.html"><svg class="footer__logo" width="90" height="22"><use xlink:href="img/sprite-svg.svg#header-logo"></use></svg></a>
+    <div class="footer__contacts">
+      <div class="footer__links">
+        <nav class="footer-nav">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="/blog.html" title="Кейсы">Кейсы</a></li>
+            <li class="footer__item"><a href="/about.html" title="О нас">О нас</a></li>
+          </ul>
+        </nav><a class="footer__phone" href="tel:+78123326872">+7 812 332-68-72</a>
+      </div>
+      <div class="footer__mail"><a href="mailto:mediabaystudio@gmail.com">mediabaystudio@gmail.com</a></div>
+      <div class="footer__address">Санкт-Петербург, пр. Обуховской обороны, д. 86, лит. М, БЦ «Квартал», офис 509.</div>
+    </div>
+    <div class="footer__soc">
+      <p class="footer__copy">© 2018 Студия Media bay. Все права защищены</p>
+      <ul class="footer__socials">
+        <li class="footer__social footer__social--vk"><a href="#"><svg width="27" height="15"><use xlink:href="img/sprite-svg.svg#vk"></use></svg><span class="visually-hidden">Вконтакте</span></a></li>
+        <li class="footer__social footer__social--fb"><a href="#"><svg width="10" height="18"><use xlink:href="img/sprite-svg.svg#facebook"></use></svg><span class="visually-hidden">Facebook</span></a></li>
+        <li class="footer__social footer__social--inst"><a href="#"><svg width="20" height="20"><use xlink:href="img/sprite-svg.svg#instagram"></use></svg><span class="visually-hidden">Instagram</span></a></li>
+      </ul><a class="footer__conf" href="/policy.html">Политика конфиденциальности</a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="/js/modernizr.custom.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/notificationFx.js"></script>
+    <script src="/js/script.min.js"></script>
+    <script src="/slick/slick.js"></script>
+  </section>
+  <div class="modal-mask">
+    <section class="modal">
+      <h2 class="modal__header"></h2>
+      <p class="modal__text"></p><button class="modal__close">Закрыть</button>
+    </section>
+  </div>
+</body>
+
+</html>
