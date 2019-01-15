@@ -276,28 +276,65 @@
       background-image: url('../img/landing.png');
       background-position: top center;
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 150px 160px;
 
       @media (min-width: $screen-sm) {
         right: unset;
         left: -96px;
-        bottom: -42px;
+        bottom: -75px;
         width: 260px;
         height: 285px;
+        background-size: 170px 190px;
       }
 
       @media (min-width: $screen-md) {
-        bottom: -5px;
-        width: 266px;
-        height: 291px;
+        left: -120px;
+        bottom: -25px;
+        width: 312px;
+        height: 285px;
+        background-size: 200px 240px;
       }
 
       @media (min-width: $screen-lg) {
         left: -120px;
-        bottom: -40px;
+        bottom: -30px;
         width: 338px;
-        height: 371px;
+        height: 327px;
+        background-size: 230px 270px;
       }
+    }
+
+    &--business::after {
+      background-image: url('../img/business.png');
+
+      @media (min-width: $screen-sm) {
+        background-size: 190px 190px;
+      }
+
+      @media (min-width: $screen-md) {
+        background-size: 240px 240px;
+      }
+
+      @media (min-width: $screen-lg) {
+        background-size: 270px 270px;
+      }
+    }
+
+    &--commerce::after {
+
+      @media (min-width: $screen-sm) {
+        background-size: 190px 190px;
+      }
+
+      @media (min-width: $screen-md) {
+        background-size: 240px 240px;
+      }
+
+      @media (min-width: $screen-lg) {
+        background-size: 270px 270px;
+      }
+
+      background-image: url('../img/commerce.png');
     }
   }
 
