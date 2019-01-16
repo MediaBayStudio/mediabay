@@ -183,19 +183,19 @@
       </tr>
       <tr>
         <td><span class="competitions__name">WordPress</span>
-          <p class="competition__hint visually-hidden">У нас есть специалисты по разработке, дизайну, копирайтингу, продвижению проектов и завоеванию мира</p>
+          <p class="competition__hint visually-hidden">Система управления контентом, позволяющая контролировать и выполнять задачи наполнения сайта.</p>
         </td>
         <td><span class="competitions__name">JavaScript</span>
           <p class="competition__hint visually-hidden">Язык программирования, который добавляет интерактивность и анимационные эффекты на сайт.</p>
         </td>
         <td class="colored"><span class="competitions__name">jQuery</span>
-          <p class="competition__hint visually-hidden">У нас есть специалисты по разработке, дизайну, копирайтингу, продвижению проектов и завоеванию мира</p>
+          <p class="competition__hint visually-hidden">Библиотека решений JavaScript, которая позволяет в разы сократить исходный код, ускорить отрисовку страниц и улучшить реагирование сайта.</p>
         </td>
         <td><span class="competitions__name">Babel</span>
-          <p class="competition__hint visually-hidden">У нас есть специалисты по разработке, дизайну, копирайтингу, продвижению проектов и завоеванию мира</p>
+          <p class="competition__hint visually-hidden">Позволяет поддерживать самый последний стандарт языка JavaScript</p>
         </td>
         <td><span class="competitions__name">PHP</span>
-          <p class="competition__hint visually-hidden">У нас есть специалисты по разработке, дизайну, копирайтингу, продвижению проектов и завоеванию мира</p>
+          <p class="competition__hint visually-hidden">Язык программирования, наиболее часто использующийся в разработке серверной части.</p>
         </td>
       </tr>
       <tr>
@@ -203,13 +203,13 @@
           <p class="competition__hint visually-hidden">Инструмент для упрощения разработки CSS.</p>
         </td>
         <td class="colored"><span class="competitions__name">Figma</span>
-          <p class="competition__hint visually-hidden">У нас есть специалисты по разработке, дизайну, копирайтингу, продвижению проектов и завоеванию мира</p>
+          <p class="competition__hint visually-hidden">Дизайн-платформа, позволяющая команде в режиме реального времени работать над одним и тем же проектом, экономит ресурсы и упрощает коммуникации.</p>
         </td>
         <td><span class="competitions__name">Sketch</span>
-          <p class="competition__hint visually-hidden">У нас есть специалисты по разработке, дизайну, копирайтингу, продвижению проектов и завоеванию мира</p>
+          <p class="competition__hint visually-hidden">Графический редактор для разработки дизайна интерфейсов, обладает широким спектром возможностей.</p>
         </td>
         <td><span class="competitions__name">Photoshop</span>
-          <p class="competition__hint visually-hidden">У нас есть специалисты по разработке, дизайну, копирайтингу, продвижению проектов и завоеванию мира</p>
+          <p class="competition__hint visually-hidden">Функциональный графический редактор для работы с растровыми изображениями.</p>
         </td>
         <td><span class="competitions__name">BEM</span>
           <p class="competition__hint visually-hidden">Единые правила написания кода, которые упрощают разработку и увеличивают производительность.</p>
@@ -288,7 +288,7 @@
       <li class="costs__item">
         <h3 class="costs__title">LANDING PAGE</h3>
         <p class="costs__text">Крайне полезный инструмент для пополнения клиентской базы и продвижения продукта. Разрабатываем отдельный лендинг под каждый бренд, товар, услугу или акцию.<span class="costs__price">от 80 000 ₽</span></p>
-        <ul class="costs__advantages-list">
+        <ul class="costs__advantages-list costs__advantages-list--landing">
           <li class="costs__advantages-item">индивидуальный дизайн</li>
           <li class="costs__advantages-item">1-5 экранов</li>
           <li class="costs__advantages-item">блок захвата данных</li>
@@ -299,7 +299,7 @@
       <li class="costs__item">
         <h3 class="costs__title">BUSINESS SERVICE</h3>
         <p class="costs__text">Важный элемент имиджа компании — информативный структурированный сайт с удобным функционалом. Решает задачи от повышения доверия к бренду до получения заказов.<span class="costs__price">от 120 000 ₽</span></p>
-        <ul class="costs__advantages-list">
+        <ul class="costs__advantages-list costs__advantages-list--business">
           <li class="costs__advantages-item">индивидуальный дизайн</li>
           <li class="costs__advantages-item">разработка структуры</li>
           <li class="costs__advantages-item">функционал оформления заявки</li>
@@ -310,7 +310,7 @@
       <li class="costs__item">
         <h3 class="costs__title">E-COMMERCE</h3>
         <p class="costs__text">Удобная система ведения электронной торговли для компаний любого размера: помогает клиенту познакомиться с товарами и услугами, выбрать нужное и сделать заказ.<span class="costs__price">от 160 000 ₽</span></p>
-        <ul class="costs__advantages-list">
+        <ul class="costs__advantages-list costs__advantages-list--commerce">
           <li class="costs__advantages-item">индивидуальный дизайн</li>
           <li class="costs__advantages-item">каталог товаров</li>
           <li class="costs__advantages-item">система фильтров и сортировки</li>
@@ -346,34 +346,34 @@
       </div>
       <div class="form__step form__step-two form__step-two--design">
         <div class="form__answers">
-          <p><input class="form__radios" type="radio" name="development-name" id="new-site" value="new-site"/><label class="form__label" for="new-site"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#design"></use></svg><span>Создание нового сайта</span></label></p>
-          <p><input class="form__radios" type="radio" name="development-name" id="old-site" value="old-site"/><label class="form__label" for="old-site"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#conversion"></use></svg><span>Доработка существующего сайта</span></label></p>
+          <p><input class="form__radios" type="radio" name="development-name" id="new-site" value="new-site"/><label class="form__label" for="new-site"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#old-site"></use></svg><span>Создание нового сайта</span></label></p>
+          <p><input class="form__radios" type="radio" name="development-name" id="old-site" value="old-site"/><label class="form__label" for="old-site"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#new-site"></use></svg><span>Доработка существующего сайта</span></label></p>
         </div>
       </div>
       <div class="form__step form__step-two form__step-two--conversion">
         <div class="form__answers">
-          <p><input class="form__radios" type="radio" name="sales-name" id="analitics" value="analitics"/><label class="form__label" for="analitics"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#design"></use></svg><span>Аналитика каналов привлечения</span></label></p>
-          <p><input class="form__radios" type="radio" name="sales-name" id="ui-ux" value="ui-ux"/><label class="form__label" for="ui-ux"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#conversion"></use></svg><span>UI/UX анализ сайта</span></label></p>
+          <p><input class="form__radios" type="radio" name="sales-name" id="analitics" value="analitics"/><label class="form__label" for="analitics"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#analitics"></use></svg><span>Аналитика каналов привлечения</span></label></p>
+          <p><input class="form__radios" type="radio" name="sales-name" id="ui-ux" value="ui-ux"/><label class="form__label" for="ui-ux"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#ui-ux"></use></svg><span>UI/UX анализ сайта</span></label></p>
         </div>
       </div>
       <div class="form__step form__step-two form__step-two--marketing">
         <div class="form__answers">
-          <p><input class="form__radios" type="radio" name="marketing-name" id="all-includes" value="all-includes"/><label class="form__label" for="all-includes"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#design"></use></svg><span>Комплекс услуг</span></label></p>
-          <p><input class="form__radios" type="radio" name="marketing-name" id="smm" value="smm"/><label class="form__label" for="smm"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#conversion"></use></svg><span>SMM</span></label></p>
-          <p><input class="form__radios" type="radio" name="marketing-name" id="seo" value="seo"/><label class="form__label" for="seo"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#design"></use></svg><span>SEO</span></label></p>
-          <p><input class="form__radios" type="radio" name="marketing-name" id="sea" value="sea"/><label class="form__label" for="sea"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#conversion"></use></svg><span>SEA - контекстная реклама</span></label></p>
+          <p><input class="form__radios" type="radio" name="marketing-name" id="all-includes" value="all-includes"/><label class="form__label" for="all-includes"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#all-includes"></use></svg><span>Комплекс услуг</span></label></p>
+          <p><input class="form__radios" type="radio" name="marketing-name" id="smm" value="smm"/><label class="form__label" for="smm"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#smm"></use></svg><span>SMM</span></label></p>
+          <p><input class="form__radios" type="radio" name="marketing-name" id="seo" value="seo"/><label class="form__label" for="seo"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#seo"></use></svg><span>SEO</span></label></p>
+          <p><input class="form__radios" type="radio" name="marketing-name" id="sea" value="sea"/><label class="form__label" for="sea"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#sea"></use></svg><span>SEA - контекстная реклама</span></label></p>
         </div>
       </div>
       <div class="form__step form__step-three form__step-three--seo">
         <div class="form__answers">
-          <p><input class="form__radios" type="radio" name="seo-name" id="analisys" value="analisys"/><label class="form__label" for="analisys"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#design"></use></svg><span>Аналитика</span></label></p>
-          <p><input class="form__radios" type="radio" name="seo-name" id="promotion" value="promotion"/><label class="form__label" for="promotion"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#conversion"></use></svg><span>Продвижение</span></label></p>
+          <p><input class="form__radios" type="radio" name="seo-name" id="analisys" value="analisys"/><label class="form__label" for="analisys"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#analisys"></use></svg><span>Аналитика</span></label></p>
+          <p><input class="form__radios" type="radio" name="seo-name" id="promotion" value="promotion"/><label class="form__label" for="promotion"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#promotion"></use></svg><span>Продвижение</span></label></p>
         </div>
       </div>
       <div class="form__step form__step-three form__step-three--sea">
         <div class="form__answers">
-          <p><input class="form__radios" type="radio" name="system-name" id="yandex" value="yandex"/><label class="form__label" for="yandex"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#design"></use></svg><span>Яндекс.Директ</span></label></p>
-          <p><input class="form__radios" type="radio" name="system-name" id="google" value="google"/><label class="form__label" for="google"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#conversion"></use></svg><span>Google AdWords</span></label></p>
+          <p><input class="form__radios" type="radio" name="system-name" id="yandex" value="yandex"/><label class="form__label" for="yandex"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#yandex"></use></svg><span>Яндекс.Директ</span></label></p>
+          <p><input class="form__radios" type="radio" name="system-name" id="google" value="google"/><label class="form__label" for="google"><svg class="form__icon form__icon--design" width="35" height="30"><use xlink:href="img/sprite-svg.svg#google"></use></svg><span>Google AdWords</span></label></p>
         </div>
       </div>
       <div class="form__step form__step-four form__step--main">
