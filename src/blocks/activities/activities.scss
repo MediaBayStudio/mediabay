@@ -136,6 +136,7 @@
 
     &--opened {
       &::after{
+        background-size: 10px 2px;
         background-image: url('../img/plus.svg');
 
         @media (min-width: $screen-sm) {

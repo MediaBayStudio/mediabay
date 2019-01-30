@@ -493,6 +493,7 @@
       margin-right: 0;
       min-width: 350px;
       max-width: 450px;
+      z-index: 1;
     }
 
     @media (min-width: $screen-md) {

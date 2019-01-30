@@ -189,6 +189,7 @@
 
   &__price {
     display: block;
+    margin-top: 10px;
     margin-left: -2px;
     font-size: 12px;
     line-height: 20px;
@@ -269,7 +270,7 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: -17px;
+      bottom: 5px;
       right: -75px;
       width: 180px;
       height: 180px;
@@ -339,7 +340,7 @@
   }
 
   &__advantages-item {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     @media (min-width: $screen-md) {
       margin-bottom: 15px;

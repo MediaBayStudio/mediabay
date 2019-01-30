@@ -53,7 +53,8 @@
       }
     }
 
-    &:last-of-type:hover {
+    &:last-of-type:hover,
+    &:last-of-type.main-nav__item--active {
       &::after {
         right: -1px;
         width: 35px;
