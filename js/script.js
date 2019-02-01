@@ -528,4 +528,79 @@ $('.modal__close').on('click', function() {
 })
 
 
+
+var x = 8;
+var y = 15;
+var lastScrollTop = 0;
+var val = '';
+var wh = $(document).height();
+$(window).scroll(function(event){
+  if ($(window).width() >= '768') {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop){
+      if (($(window).width() < '768') && st < 400 && ($(window).width() > '1000')  && x < 38) {
+        x = x+1.5;
+        document.querySelector(".activities").style.backgroundSize = x + "% 100%";
+      }
+
+      if (($(window).width() >= '1000') && (st > 400) && (st < 1000) && ( x < 38 )) {
+        x = x+1.5;
+        document.querySelector(".activities").style.backgroundSize = x + "% 100%";
+      }
+
+
+      if (($(window).width() >= '768') && ($(window).width() < '1000') && (st > 3000) && (st < 3600) && ( y < 65)) {
+        y = y+1.5;
+        val = y + "% 400px";
+        document.querySelector(".projects").style.backgroundSize = val;
+      }
+
+      if (($(window).width() >= '1000') && ($(window).width() < '1440') && (st > 2400) && (st < 3200) && ( y < 65)) {
+        y = y+1.5;
+        val = y + "% 494px";
+        document.querySelector(".projects").style.backgroundSize = val;
+      }
+
+      if (($(window).width() >= '1440') && (st > 2900) && (st < 3600) && ( y < 55)) {
+        y = y+1.5;
+        val = y + "% 500px";
+        document.querySelector(".projects").style.backgroundSize = val;
+      }
+
+
+    } else {
+
+      if (st < 400 && ($(window).width() < '1000')  && x > 8) {
+        x = x-1.5;
+        document.querySelector(".activities").style.backgroundSize = x + "% 100%";
+      }
+
+      if (($(window).width() >= '1000') && (st > 400) && (st < 1000) && ( x > 8 )) {
+        x = x-1.5;
+        document.querySelector(".activities").style.backgroundSize = x + "% 100%";
+      }
+
+      if (($(window).width() >= '768') && ($(window).width() < '1000') && (st > 3000) && (st < 3600) && ( y > 15 )) {
+        y = y-1.5;
+        val = y + "% 400px";
+        document.querySelector(".projects").style.backgroundSize = val;
+      }
+
+      if (($(window).width() >= '1000') && ($(window).width() < '1440') && (st > 2400) && (st < 3200) && ( y > 15 )) {
+        y = y-1.5;
+        val = y + "% 494px";
+        document.querySelector(".projects").style.backgroundSize = val;
+      }
+
+      if (($(window).width() >= '1440') && (st > 2900) && (st < 3600) && ( y > 15 )) {
+        y = y-1.5;
+        val = y + "% 500px";
+        document.querySelector(".projects").style.backgroundSize = val;
+      }
+    }
+    lastScrollTop = st;
+  }
+});
+
+
 });
