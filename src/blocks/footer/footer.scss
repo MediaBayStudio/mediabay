@@ -62,8 +62,8 @@
   &__contacts {
     @media (min-width: $screen-sm) {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      align-items: center;
+      grid-template-columns: 1.2fr 0.8fr 1.2fr;
+      align-items: top;
     }
 
     @media (min-width: $screen-md) {
@@ -81,12 +81,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $screen-sm) {
+      max-width: none;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 6px;
+      padding-right: 13px;
+    }
 
     @media (min-width: $screen-md) {
-      padding-left: 0;
-      padding-right: 0;
+      padding: 0;
     }
 
     @media (min-width: $screen-lg) {
@@ -185,7 +194,8 @@
 
     @media (min-width: $screen-sm) {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 0.7fr 1fr;
+      grid-template-rows: 64px;
       align-items: center;
     }
 
@@ -279,6 +289,7 @@
       padding: 0;
       display: block;
       font-size: 11px;
+      line-height: 11px;
       color: #000;
       text-decoration: none;
       border-bottom: 1px solid #81D9D9;

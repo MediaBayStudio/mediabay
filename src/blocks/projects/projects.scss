@@ -15,7 +15,7 @@
     padding-left: 70px;
     height: 590px;
     background-image: url(../img/activities-back.png);
-    background-size: 69% 400px;
+    background-size: 15% 400px;
     background-repeat: no-repeat;
     box-shadow: unset;
   }
@@ -25,14 +25,14 @@
     padding-top: 85px;
     padding-left: 40px;
     height: 785px;
-    background-size: 66% 494px;
+    background-size: 15% 494px;
   }
 
   @media (min-width: $screen-lg) {
     margin-bottom: 160px;
     padding-top: 76px;
     padding-left: 100px;
-    background-size: 49% 500px;
+    background-size: 15% 500px;
   }
 
   &:after {
@@ -247,7 +247,7 @@
         transition: 0.3s;
 
         @media (min-width: $screen-sm)  {
-          bottom: 70px;
+          bottom: 47px;
         }
 
         @media (min-width: $screen-md)  {
@@ -316,7 +316,7 @@
       max-width: 650px;
       font-size: 18px;
       line-height: 25px;
-      margin-bottom: 23px;
+      margin-bottom: 28px;
     }
 
     @media (min-width: $screen-md) {

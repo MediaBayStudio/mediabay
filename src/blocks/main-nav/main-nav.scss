@@ -21,6 +21,8 @@
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 500;
+      position: relative;
+      z-index: 2;
 
       @media (min-width: $screen-sm) {
         font-size: 13px;

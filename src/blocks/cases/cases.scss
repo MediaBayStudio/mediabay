@@ -126,8 +126,8 @@
     max-width: 600px;
     height: auto;
     max-height: 300px;
-    margin-top: 18px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 18px;
     object-fit: cover;
 
     @media (min-width: $screen-sm) {
@@ -178,7 +178,7 @@
   &__link {
     display: block;
     position: relative;
-    margin-top: 11px;
+    margin-top: 10px;
     font-size: 10px;
     font-weight: bold;
     color: #000;
@@ -202,8 +202,8 @@
     &::after {
       content: '';
       position: absolute;
-      top: 5px;
-      left: 82px;
+      top: 6px;
+      left: 75px;
       width: 30px;
       height: 7px;
       background-image: url('../img/arrow-right.svg');

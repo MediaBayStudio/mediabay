@@ -18,6 +18,7 @@
     margin: 0;
     padding: 40px 20px;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.05);
+    display: none;
 
     @media (min-width: $screen-sm) {
       display: flex;
@@ -46,10 +47,11 @@
     font-weight: 500;
 
     @media (min-width: $screen-sm) {
+      padding-left: 45px;
       margin: 0;
       font-size: 13px;
       line-height: 20px;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     @media (min-width: $screen-md) {

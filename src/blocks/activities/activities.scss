@@ -15,7 +15,7 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     background-image: url(../img/activities-back.png);
-    background-size: 38% 100%;
+    background-size: 8% 100%;
     background-repeat: no-repeat;
     margin-left: 0;
     margin-right: 30px;
@@ -29,14 +29,12 @@
     margin-bottom: 110px;
     padding-left: 100px;
     padding-top: 73px;
-    background-size: 24% 100%;
   }
 
   @media (min-width: $screen-lg) {
     min-height: 490px;
     margin-bottom: 125px;
     margin-left: 100px;
-    background-size: 27% 100%;
   }
 
   &__header {
@@ -196,7 +194,7 @@
       top: 82px;
       left: 70px;
       padding-left: 0;
-      width: 60%;
+      width: 55%;
       border-top: none;
     }
 
@@ -219,7 +217,7 @@
       line-height: 20px;
 
       @media (min-width: $screen-sm) {
-        margin-top: 25px;
+        margin-top: 20px;
         font-size: 14px;
         line-height: 25px;
       }

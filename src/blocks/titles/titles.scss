@@ -43,6 +43,14 @@
     background-image: url('../img/titles__back--lg.png');
   }
 
+  &--blog {
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-sm) {
+      background-image: url('../img/titles__back-blog--sm.png');
+    }
+  }
+
   &--policy {
     display: block !important;
     max-width: 760px;
@@ -172,6 +180,7 @@
     margin-bottom: 4px;
 
     @media (min-width: $screen-sm) {
+      font-size: 18px;
       margin-bottom: 10px;
     }
 
