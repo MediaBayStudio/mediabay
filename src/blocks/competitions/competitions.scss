@@ -124,7 +124,14 @@
 
   &__name {
     @media (min-width: $screen-md) {
+      display: block;
+      height: 20px;
+      transition: 0.3s;
       cursor: pointer;
+
+      &:hover {
+        font-size: 17px;
+      }
     }
   }
 }

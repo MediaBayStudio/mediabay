@@ -182,7 +182,7 @@
     }
 
     @media (min-width: $screen-lg) {
-      margin-top: -20px;
+      margin-top: 9px;
       margin-right: 50px;
       font-size: 17px;
       line-height: 30px;
@@ -211,7 +211,7 @@
     }
 
     @media (min-width: $screen-lg) {
-      padding-top: 21px;
+      padding-top: 12px;
       font-size: 20px;
       line-height: 25px;
     }
@@ -303,11 +303,11 @@
       }
 
       @media (min-width: $screen-lg) {
-        left: -120px;
+        left: -134px;
         bottom: -30px;
         width: 338px;
         height: 327px;
-        background-size: 230px 270px;
+        background-size: 221px 257px;
       }
     }
 
@@ -325,6 +325,7 @@
 
       @media (min-width: $screen-lg) {
         background-size: 270px 270px;
+        bottom: -16px;
       }
     }
 
@@ -348,7 +349,9 @@
       }
 
       @media (min-width: $screen-lg) {
-        background-size: 270px 270px;
+        background-size: 300px 240px;
+        left: -93px;
+        bottom: -39px;
       }
 
     }

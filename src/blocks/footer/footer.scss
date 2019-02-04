@@ -117,6 +117,7 @@
   }
 
   &__item {
+    position: relative;
     a {
       font-size: 12px;
       font-weight: 700;
@@ -130,6 +131,12 @@
 
       @media (min-width: $screen-lg) {
         font-size: 15px;
+      }
+    }
+
+    &--active {
+      a {
+        color: rgba(252, 54, 77, 0.7);
       }
     }
   }
@@ -156,6 +163,11 @@
       color: #000;
       text-decoration: none;
       border-bottom: 1px solid #81D9D9;
+      transition: 0.3s;
+
+      &:hover {
+        border-bottom-color: rgba(252, 54, 77, 0.7);
+      }
 
       @media (min-width: $screen-lg) {
         font-size: 16px;
@@ -300,6 +312,11 @@
       color: #000;
       text-decoration: none;
       border-bottom: 1px solid #81D9D9;
+      transition: 0.3s;
+
+      &:hover {
+        border-bottom-color: rgba(252, 54, 77, 0.7);
+      }
     }
 
     @media (min-width: $screen-md) {

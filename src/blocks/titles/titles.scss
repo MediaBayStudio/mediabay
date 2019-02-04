@@ -35,7 +35,7 @@
 
   @media (min-width: $screen-lg) {
     margin-top: 12px;
-    margin-bottom: 133px;
+    margin-bottom: 113px;
     padding-top: 160px;
     padding-left: 100px;
     padding-right: 100px;
@@ -57,6 +57,11 @@
       margin-bottom: 28px;
       background-image: url('../img/titles__back-blog--md.png');
       background-size: 60%;
+    }
+
+    @media (min-width: $screen-lg) {
+      grid-template-columns: 0.8fr 1fr;
+      background-image: url('../img/titles__back-blog--lg.png');
     }
   }
 

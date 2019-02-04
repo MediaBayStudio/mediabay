@@ -63,7 +63,8 @@
     }
 
     @media (min-width: $screen-lg) {
-      margin-right: 174px;
+      margin-right: 0;
+      padding-right: 169px;
       font-size: 18px;
       line-height: 35px;
     }
