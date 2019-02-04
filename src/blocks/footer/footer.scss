@@ -67,8 +67,8 @@
     }
 
     @media (min-width: $screen-md) {
-      padding-top: 4px;
-      padding-bottom: 36px;
+      padding-top: 12px;
+      padding-bottom: 18px;
     }
 
     @media (min-width: $screen-lg) {
@@ -231,10 +231,17 @@
 
     svg {
       fill: #8AC2C2;
+      transition: 0.3s;
     }
   }
 
   &__social {
+
+    &:hover {
+      a svg {
+        fill: rgba(252, 54, 77, 0.7);
+      }
+    }
 
     &--vk {
       @media (min-width: $screen-md) {

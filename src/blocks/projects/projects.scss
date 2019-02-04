@@ -22,9 +22,9 @@
 
   @media (min-width: $screen-md) {
     position: relative;
-    padding-top: 85px;
+    padding-top: 75px;
     padding-left: 40px;
-    height: 785px;
+    height: 765px;
     background-size: 15% 494px;
   }
 
@@ -41,9 +41,10 @@
       content: 'Процесс';
       position: absolute;
       top: 50%;
-      margin-top: -186px;
-      right: -255px;
+      margin-top: -71px;
+      right: -273px;
       font-size: 150px;
+      line-height: 65px;
       color: rgba(14, 43, 148, 0.04);
       font-weight: 700;
       text-transform: uppercase;
@@ -77,7 +78,7 @@
     }
 
     @media (min-width: $screen-md) {
-        margin-bottom: 70px;
+        margin-bottom: 55px;
         font-size: 36px;
         line-height: 45px
     }
@@ -138,9 +139,9 @@
       }
 
       @media (min-width: $screen-md) {
-        height: 59%;
+        height: 265px;
         top: 61px;
-        left: 44px;
+        left: 48px;
       }
 
       @media (min-width: $screen-lg) {

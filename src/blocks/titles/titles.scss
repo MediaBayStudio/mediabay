@@ -24,12 +24,12 @@
   }
 
   @media (min-width: $screen-md) {
-    margin-top: 50px;
+    margin-top: 11px;
     margin-bottom: 157px;
-    padding-top: 131px;
+    padding-top: 160px;
     padding-left: 40px;
     padding-right: 40px;
-    background-size: contain; // временная мера?
+    background-size: 48%;
     background-image: url('../img/titles__back--md.png');
   }
 
@@ -47,7 +47,16 @@
     padding-bottom: 30px;
 
     @media (min-width: $screen-sm) {
+      padding-bottom: 10px;
       background-image: url('../img/titles__back-blog--sm.png');
+      background-size: 60%;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-top: 82px;
+      margin-bottom: 28px;
+      background-image: url('../img/titles__back-blog--md.png');
+      background-size: 60%;
     }
   }
 
@@ -95,7 +104,7 @@
     }
 
     @media (min-width: $screen-md) {
-      margin-top: 40px;
+      margin-top: 27px;
       font-size: 17px;
       line-height: 30px;
     }

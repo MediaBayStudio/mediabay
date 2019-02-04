@@ -41,7 +41,7 @@
     @media (min-width: $screen-md) {
       font-size: 36px;
       line-height: 45px;
-      margin-bottom: 48px;
+      margin-bottom: 35px;
     }
 
 
@@ -82,7 +82,7 @@
     text-transform: uppercase;
 
     @media (min-width: $screen-sm) {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 50px;
     }
 
@@ -134,7 +134,8 @@
       width: calc(100% - 280px);
       margin-left: 100px;
       margin-right: 180px;
-      margin-bottom: 25px;
+      margin-top: 13px;
+      margin-bottom: 10px;
     }
 
     @media (min-width: $screen-md) {

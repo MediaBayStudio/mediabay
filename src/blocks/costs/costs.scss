@@ -15,7 +15,7 @@
   @media (min-width: $screen-md) {
     padding-left: 40px;
     padding-right: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 130px;
   }
 
   @media (min-width: $screen-lg) {
@@ -39,7 +39,7 @@
     }
 
     @media (min-width: $screen-md) {
-      margin-bottom: 37px;
+      margin-bottom: 32px;
       font-size: 36px;
       line-height: 45px;
     }
@@ -64,7 +64,7 @@
 
     @media (min-width: $screen-md) {
       width: 59%;
-      margin-bottom: 116px;
+      margin-bottom: 98px;
       font-size: 16px;
     }
 
@@ -98,7 +98,7 @@
     }
 
     @media (min-width: $screen-md) {
-      margin-bottom: 115px;
+      margin-bottom: 103px;
     }
 
     @media (min-width: $screen-lg) {
@@ -146,8 +146,8 @@
 
       @media (min-width: $screen-md) {
         height: 4px;
-        left: 2px;
-        top: -23px;
+        left: 0px;
+        top: -15px;
       }
 
       @media (min-width: $screen-lg) {
@@ -176,7 +176,7 @@
     }
 
     @media (min-width: $screen-md)  {
-      margin-top: 25px;
+      margin-top: 13px;
       font-size: 14px;
       line-height: 25px;
     }
@@ -204,6 +204,10 @@
       line-height: 25px;
       font-weight: 500;
       color: #000;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-top: 13px;
     }
 
     @media (min-width: $screen-lg) {
@@ -249,9 +253,9 @@
     }
 
     @media (min-width: $screen-md) {
-      margin-top: -25px;
+      margin-top: -15px;
       padding-top: 52px;
-      padding-left: 200px;
+      padding-left: 206px;
       min-width: unset;
       width: 100%;
       max-width: 550px;
@@ -295,7 +299,7 @@
         bottom: -25px;
         width: 312px;
         height: 285px;
-        background-size: 200px 240px;
+        background-size: 193px 200px;
       }
 
       @media (min-width: $screen-lg) {
@@ -338,7 +342,9 @@
       }
 
       @media (min-width: $screen-md) {
-        background-size: 240px 240px;
+        background-size: 213px 193px;
+        left: -97px;
+        bottom: -42px;
       }
 
       @media (min-width: $screen-lg) {
