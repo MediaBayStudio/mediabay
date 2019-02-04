@@ -212,19 +212,19 @@
       opacity: 0.75; }
 
 .chrome {
-  background-image: url(../img/sprite-04222846214763776.png);
+  background-image: url(../img/sprite-0617170274762576.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-04222846214763776.png);
+  background-image: url(../img/sprite-0617170274762576.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-04222846214763776.png);
+  background-image: url(../img/sprite-0617170274762576.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
@@ -438,7 +438,11 @@ img {
         -ms-flex-pack: justify;
             justify-content: space-between; }
     .footer__socials svg {
-      fill: #8AC2C2; }
+      fill: #8AC2C2;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+  .footer__social:hover a svg {
+    fill: rgba(252, 54, 77, 0.7); }
   .footer__copy {
     display: none; }
   .footer__conf {
@@ -1150,7 +1154,13 @@ img {
   text-transform: uppercase;
   color: #fff;
   -webkit-box-shadow: 1px 5px 20px rgba(255, 80, 100, 0.2);
-          box-shadow: 1px 5px 20px rgba(255, 80, 100, 0.2); }
+          box-shadow: 1px 5px 20px rgba(255, 80, 100, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer; }
+  .form__send:hover, .form__send:active {
+    -webkit-box-shadow: 1px 3px 40px rgba(252, 54, 77, 0.4);
+            box-shadow: 1px 3px 40px rgba(252, 54, 77, 0.4); }
 
 .form__progress {
   display: -webkit-box;
@@ -1968,7 +1978,7 @@ img {
         font-size: 28px;
         line-height: 35px; }
       .cases__title {
-        font-size: 22px;
+        font-size: 20px;
         line-height: 50px; }
         .cases__title::before {
           top: 21px; }
@@ -1976,7 +1986,8 @@ img {
         width: calc(100% - 280px);
         margin-left: 100px;
         margin-right: 180px;
-        margin-bottom: 25px; }
+        margin-top: 13px;
+        margin-bottom: 10px; }
       .cases__lead {
         width: calc(100% - 280px);
         margin-top: 10px;
@@ -2135,12 +2146,14 @@ img {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         padding-top: 35px;
         padding-bottom: 35px; }
       .forms__hint {
         padding-left: 45px;
+        padding-right: 45px;
         margin: 0;
         font-size: 13px;
         line-height: 20px;
@@ -2258,7 +2271,9 @@ img {
       background-size: 440px 580px;
       background-image: url("../img/titles__back--sm.png"); }
       .titles--blog {
-        background-image: url("../img/titles__back-blog--sm.png"); }
+        padding-bottom: 10px;
+        background-image: url("../img/titles__back-blog--sm.png");
+        background-size: 60%; }
       .titles__header {
         margin-bottom: 10px;
         font-size: 36px;
@@ -2471,13 +2486,18 @@ img {
   @media (min-width: 988px) {
       .slider__divider {
         margin-right: 47%; } }
-  @media (min-width: 1020px) {
-        .slider__promo .slick-next {
-          right: 204px; } }
-  @media (min-width: 1024px) {
+  @media (min-width: 1000px) {
       .main-nav__item a {
         font-size: 15px;
         line-height: 1; }
+      .main-nav__item--active::after, .main-nav__item:hover::after {
+        width: 55px;
+        height: 7px;
+        right: -1px;
+        bottom: 2px; }
+      .main-nav__item:last-of-type:hover::after, .main-nav__item:last-of-type.main-nav__item--active::after {
+        width: 50px;
+        right: -2px; }
     .header {
       padding-top: 46px;
       padding-left: 42px;
@@ -2499,8 +2519,8 @@ img {
     .footer__logo {
       width: 105px; }
     .footer__contacts {
-      padding-top: 4px;
-      padding-bottom: 36px; }
+      padding-top: 12px;
+      padding-bottom: 18px; }
       .footer__links {
         padding: 0; }
       .footer__item a {
@@ -2529,7 +2549,7 @@ img {
         font-size: 13px; }
     .slider {
       margin-top: -90px;
-      margin-bottom: 111px; }
+      margin-bottom: 32px; }
         .slider__promo .slick-dots {
           left: 34px;
           bottom: 168px; }
@@ -2548,8 +2568,6 @@ img {
           bottom: -51px; }
         .slider__promo .slick-prev {
           right: 300px; }
-        .slider__promo .slick-prev {
-          right: 307px; }
         .slider__promo .slick-next {
           right: 200px; }
     .slider__item {
@@ -2558,11 +2576,13 @@ img {
         font-size: 45px;
         line-height: 65px;
         left: 38px;
-        top: -108px; }
+        top: -107px; }
         .slider__title::before {
-          top: -44px;
-          left: 2px;
-          font-size: 137px; }
+          top: -39px;
+          left: -3px;
+          font-size: 146px;
+          line-height: 65px;
+          font-weight: 500; }
       .slider__subtitle {
         font-size: 26px;
         line-height: 65px;
@@ -2582,7 +2602,7 @@ img {
         top: -100px; }
     .activities {
       min-height: 455px;
-      margin-bottom: 110px;
+      margin-bottom: 119px;
       padding-left: 100px;
       padding-top: 73px; }
       .activities__header {
@@ -2591,18 +2611,19 @@ img {
         font-size: 36px;
         line-height: 45px; }
       .activities__list {
-        margin-top: -60px;
-        margin-right: 88px;
+        margin-top: -65px;
+        margin-right: 42px;
         height: 330px; }
       .activities__title {
         padding-top: 3px;
         padding-bottom: 3px;
         font-size: 16px; }
       .activities__text {
-        top: 118px;
+        top: 120px;
         left: 100px;
         width: 51%; }
         .activities__text p {
+          margin-top: 23px;
           font-size: 16px; }
     .competitions {
       display: grid;
@@ -2610,7 +2631,7 @@ img {
       grid-template-rows: minmax(60px, auto);
       grid-column-gap: 40px;
       margin-left: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 96px;
       margin-right: 40px; }
       .competitions__header {
         font-size: 36px;
@@ -2618,7 +2639,7 @@ img {
         margin-bottom: 0; }
       .competitions__lead {
         max-width: 100%;
-        margin-top: 25px;
+        margin-top: 17px;
         margin-bottom: 0;
         font-size: 16px;
         line-height: 25px; }
@@ -2637,7 +2658,7 @@ img {
       .cases__header {
         font-size: 36px;
         line-height: 45px;
-        margin-bottom: 48px; }
+        margin-bottom: 35px; }
       .cases__item {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -2667,24 +2688,25 @@ img {
         margin-top: 25px; }
     .projects {
       position: relative;
-      padding-top: 85px;
+      padding-top: 75px;
       padding-left: 40px;
-      height: 785px;
+      height: 765px;
       background-size: 15% 494px; }
     .projects:after {
       content: 'Процесс';
       position: absolute;
       top: 50%;
-      margin-top: -186px;
-      right: -255px;
+      margin-top: -71px;
+      right: -273px;
       font-size: 150px;
+      line-height: 65px;
       color: rgba(14, 43, 148, 0.04);
       font-weight: 700;
       text-transform: uppercase;
       -webkit-transform: rotate(90deg);
               transform: rotate(90deg); }
       .projects__header {
-        margin-bottom: 70px;
+        margin-bottom: 55px;
         font-size: 36px;
         line-height: 45px; }
       .projects__list {
@@ -2693,9 +2715,9 @@ img {
         right: 215px;
         padding: 59px 60px 100px 122px; }
         .projects__list .slick-dots {
-          height: 59%;
+          height: 265px;
           top: 61px;
-          left: 44px; }
+          left: 48px; }
             .projects__list .slick-dots li button {
               width: 40px;
               height: 40px; }
@@ -2727,31 +2749,33 @@ img {
     .costs {
       padding-left: 40px;
       padding-right: 40px;
-      margin-bottom: 70px; }
+      margin-bottom: 130px; }
       .costs__header {
-        margin-bottom: 37px;
+        margin-bottom: 32px;
         font-size: 36px;
         line-height: 45px; }
       .costs__lead {
         width: 59%;
-        margin-bottom: 116px;
+        margin-bottom: 98px;
         font-size: 16px; }
       .costs__item:not(:last-of-type) {
-        margin-bottom: 115px; }
+        margin-bottom: 103px; }
       .costs__title {
         font-size: 28px; }
         .costs__title::before {
           height: 4px;
-          left: 2px;
-          top: -23px; }
+          left: 0px;
+          top: -15px; }
       .costs__text {
-        margin-top: 25px;
+        margin-top: 13px;
         font-size: 14px;
         line-height: 25px; }
+      .costs__price {
+        padding-top: 13px; }
       .costs__advantages-list {
-        margin-top: -25px;
+        margin-top: -15px;
         padding-top: 52px;
-        padding-left: 200px;
+        padding-left: 206px;
         min-width: unset;
         width: 100%;
         max-width: 550px;
@@ -2762,22 +2786,24 @@ img {
           bottom: -25px;
           width: 312px;
           height: 285px;
-          background-size: 200px 240px; }
+          background-size: 193px 200px; }
         .costs__advantages-list--business::after {
           background-size: 240px 240px; }
         .costs__advantages-list--commerce::after {
-          background-size: 240px 240px; }
+          background-size: 213px 193px;
+          left: -97px;
+          bottom: -42px; }
       .costs__advantages-item {
         margin-bottom: 15px; }
     .forms {
-      padding-bottom: 100px; }
+      padding-bottom: 110px; }
       .forms__hints {
-        padding: 45px 40px 40px;
+        padding: 45px 50px 40px;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start; }
       .forms__hint {
-        margin-right: 97px;
+        padding-right: 78px;
         font-size: 16px;
         line-height: 35px;
         font-weight: 500; }
@@ -2788,7 +2814,7 @@ img {
           top: -1px;
           left: -10px; }
       .forms__body {
-        min-height: 620px; }
+        min-height: 597px; }
       .forms__back {
         min-width: 154px;
         padding-left: 63px;
@@ -2797,7 +2823,7 @@ img {
           top: 6px;
           left: 5px; }
   .form {
-    padding-top: 105px;
+    padding-top: 71px;
     padding-left: 40px;
     padding-right: 40px; }
     .form__step-title {
@@ -2838,19 +2864,24 @@ img {
       padding-bottom: 12px;
       font-size: 14px; }
     .titles {
-      margin-top: 50px;
+      margin-top: 11px;
       margin-bottom: 157px;
-      padding-top: 131px;
+      padding-top: 160px;
       padding-left: 40px;
       padding-right: 40px;
-      background-size: contain;
+      background-size: 48%;
       background-image: url("../img/titles__back--md.png"); }
+      .titles--blog {
+        padding-top: 82px;
+        margin-bottom: 28px;
+        background-image: url("../img/titles__back-blog--md.png");
+        background-size: 60%; }
       .titles__header {
         margin-bottom: 0;
         font-size: 45px;
         line-height: 65px; }
       .titles__lead {
-        margin-top: 40px;
+        margin-top: 27px;
         font-size: 17px;
         line-height: 30px; }
       .titles__list {
@@ -2867,7 +2898,7 @@ img {
         font-size: 15px;
         line-height: 25px; }
     .comand {
-      margin-bottom: 130px; }
+      margin-bottom: 83px; }
     .comand::before {
       height: 300px;
       left: 40px;
@@ -2905,6 +2936,8 @@ img {
       grid-template-columns: 53% 36%;
       grid-column-gap: 100px;
       grid-row-gap: 32px;
+      margin-bottom: 109px;
+      padding-bottom: 63px;
       padding-left: 40px;
       padding-right: 40px; }
       .contacts__header {
@@ -2925,6 +2958,12 @@ img {
       font-size: 17px;
       line-height: 30px;
       margin-right: 0; } }
+  @media (min-width: 1020px) {
+        .slider__promo .slick-next {
+          right: 204px; } }
+  @media (min-width: 1024px) {
+        .slider__promo .slick-prev {
+          right: 307px; } }
   @media (min-width: 1050px) {
         .slider__promo .slick-prev {
           right: 315px; }
@@ -3297,7 +3336,7 @@ img {
           right: 42%; }
         .slider__promo .slick-next {
           right: 35%; } }
-  @media (max-width: 1024px) {
+  @media (max-width: 999px) {
     .ns-box {
       display: none; } }
   @media screen and (max-width: 25em) {
