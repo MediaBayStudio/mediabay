@@ -13,6 +13,10 @@
     padding-bottom: 110px;
   }
 
+  @media (min-width: $screen-lg) {
+    padding-bottom: 170px;
+  }
+
   &__hints {
     list-style: none;
     margin: 0;
