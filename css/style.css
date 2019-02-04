@@ -212,19 +212,19 @@
       opacity: 0.75; }
 
 .chrome {
-  background-image: url(../img/sprite-08814761588202187.png);
+  background-image: url(../img/sprite-0683661073366508.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-08814761588202187.png);
+  background-image: url(../img/sprite-0683661073366508.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-08814761588202187.png);
+  background-image: url(../img/sprite-0683661073366508.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
@@ -3215,6 +3215,8 @@ img {
           bottom: -39px; }
       .costs__advantages-item {
         margin-bottom: 10px; }
+    .forms {
+      padding-bottom: 170px; }
       .forms__hints {
         padding: 57px 100px 50px; }
       .forms__hint {
@@ -3342,7 +3344,7 @@ img {
     .contacts {
       grid-template-columns: 50% 36%;
       grid-column-gap: 180px;
-      margin-bottom: 137px;
+      margin-bottom: 170px;
       padding-left: 100px;
       padding-right: 100px;
       padding-bottom: 113px; }
