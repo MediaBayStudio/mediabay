@@ -69,7 +69,36 @@
     display: block !important;
     max-width: 760px;
     padding-right: 0 !important;
-    margin-bottom: 40px !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 5px;
+
+  background-size: 100%;
+    background-image: url('../img/titles__back-policy--lg.png');
+
+    @media (min-width: $screen-sm) {
+      padding-bottom: 25px;
+      background-size: 73%;
+      background-image: url('../img/titles__back-policy--lg.png');
+    }
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 45px;
+      background-size: 100%;
+      background-image: url('../img/titles__back-policy--lg.png');
+    }
+
+    @media (min-width: $screen-lg) {
+      background-size: 100%;
+      background-image: url('../img/titles__back-policy--lg.png');
+    }
+
+    #{$block-name}__header {
+
+      @media (min-width: $screen-md) {
+        line-height: 60px !important;
+      }
+
+    }
   }
 
 

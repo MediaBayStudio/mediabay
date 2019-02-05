@@ -133,6 +133,7 @@ $(window).load(function() {
       $("div.tile").remove();
       if ($(window).width() < '768') {
         $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+        $('.activities__header').html('Что мы делаем');
       }
       else
         if (($(window).width() >= '768') && ($(window).width() < '1000')) {
@@ -146,6 +147,7 @@ $(window).load(function() {
           }
           else {
             $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
+            $('.activities__header').html('Миссия');
           }
         }
 
@@ -173,7 +175,7 @@ $(document).ready(function(){
       }
       else {
         $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
-
+        $('.activities__header').html('Миссия');
       }
     }
   $(".slider__sliced").trigger("start_quot");

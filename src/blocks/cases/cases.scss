@@ -147,6 +147,10 @@
       margin: 0;
       margin-left: 13%;
     }
+
+    @media (min-width: $screen-lg) {
+      margin-left: auto;
+    }
   }
 
   &__lead {

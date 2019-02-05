@@ -9,11 +9,12 @@
   font-size: 12px;
   line-height: 20px;
   max-width: 760px;
-  margin-left: 40px;
+  margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 70px;
 
   @media (min-width: $screen-md) {
+    margin-left: 40px;
     font-size: 17px;
     line-height: 30px;
     margin-right: 0;
@@ -21,6 +22,10 @@
 
   @media (min-width: $screen-lg) {
     margin-left: 100px;
+  }
+
+  h2 {
+    text-transform: uppercase;
   }
 
   p, ol {

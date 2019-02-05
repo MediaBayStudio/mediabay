@@ -98,6 +98,10 @@
       width: 100%;
     }
 
+    @media (min-width: $screen-lg) {
+      margin-left: auto;
+    }
+
     tr {
       display: flex;
     }
