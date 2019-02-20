@@ -386,6 +386,14 @@
       box-shadow: 1px 3px 40px rgba(252, 54, 77, 0.4);
     }
 
+    &:disabled {
+      background-color: transparent;
+      border: 1px solid  #F86576;
+      color: #F86576;
+      box-shadow: 1px 3px 20px rgba(252, 54, 77, 0.2);
+      cursor: not-allowed;
+    }
+
     @media (min-width: $screen-sm) {
       max-width: 240px;
     }

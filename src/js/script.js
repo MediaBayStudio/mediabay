@@ -136,6 +136,18 @@ $(window).load(function() {
         $('.activities__header').html('Что мы делаем');
       }
       else
+
+      // $('.comand__img').mouseover(function(){
+      //   console.log($(this).prop('src'));
+      //   var src = $(this).prop('src');
+      //   $(this).prop('src', src.replace('.jpg', '__hoba.jpg'));
+      // })
+      //
+      // $('.comand__img').mouseleave(function(){
+      //   var src = $(this).prop('src');
+      //   $(this).prop('src', src.replace('__hoba.jpg', '.jpg'));
+      // })
+
         if (($(window).width() >= '768') && ($(window).width() < '1000')) {
           $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
           $('.activities__header').html('Миссия');
@@ -157,13 +169,15 @@ $(window).load(function() {
 
 });
 
-
 $(document).ready(function(){
 
   if ($(window).width() < '768') {
     $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+
   }
   else
+
+
     if (($(window).width() >= '768') && ($(window).width() < '1000')) {
       $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
       $('.activities__header').html('Миссия');
@@ -186,6 +200,7 @@ $(document).ready(function(){
     var rand = Math.floor(Math.random() * $('.competitions__table td').length);
      $('.competitions__table td').eq(rand).toggleClass('colored');
   }, 4000);
+
 
   $('.slider__promo').slick({
     infinite: true,
@@ -214,18 +229,31 @@ $(document).ready(function(){
             focusOnSelect:true,
             slidesToShow: 2,
           }
-        },
-        {
-          breakpoint: 1023,
-          settings: {
-            centerMode: false,
-            focusOnSelect:true,
-            slidesToShow: 2,
-          }
         }
       ]
 
   });
+
+  $('.comand__img').mouseover(function(){
+    var src = $(this).prop('src');
+    $(this).prop('src', src.replace('.jpg', '__hoba.jpg'));
+  })
+
+  $('.comand__img').mouseleave(function(){
+    var src = $(this).prop('src');
+    $(this).prop('src', src.replace('__hoba.jpg', '.jpg'));
+  })
+
+  $("#agreeded").change(function() {
+    if(this.checked) {
+        $('#contacts').prop('disabled', false);
+    }
+    else {
+      $('#contacts').prop('disabled', true);
+    }
+});
+
+
 
   $('.activities__text:not(:first)').hide();
 
@@ -241,8 +269,6 @@ $(document).ready(function(){
       $('.activities__header').html($(this).children().text());
 
     }
-
-
   })
 
   $('.form__step-one').on('change', function() {
@@ -458,9 +484,7 @@ $(document).ready(function(){
       default:
 
     }
-
   })
-
 
   $('.competitions__table span').on('click', function() {
     // create the notification
@@ -604,6 +628,7 @@ $(window).scroll(function(event){
       lastScrollTop = st;
     }
   }
+
 });
 
 
