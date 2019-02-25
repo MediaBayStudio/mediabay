@@ -11,10 +11,29 @@
   top: 50%;
   margin-top: -220px;
   left: 50%;
-  margin-left: -40%;
-  width: 80%;
-  padding: 50px 30px 80px 30px;
+  margin-left: -140px;
+  width: 280px;
+  padding: 35px 30px 60px 30px;
   background-color: #fff;
+  background-image: url("../img/modal_back--xs.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @media (min-width: $screen-sm) {
+    width: 480px;
+    margin-left: -280px;
+    padding: 50px 30px 70px 30px;
+    background-image: url("../img/modal_back.png");
+    background-size: 70%;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 600px;
+    margin-left: -300px;
+    padding: 93px 80px 170px 80px;
+    background-size: 100%;
+  }
 
 
   &-mask {
@@ -38,14 +57,26 @@
 
   &__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
     font-size: 0;
     background-color: transparent;
     border: 0;
     cursor: pointer;
+
+    @media (min-width: $screen-sm) {
+      top: 10px;
+      right: 10px;
+    }
+
+    @media (min-width: $screen-md) {
+      top: 35px;
+      right: 35px;
+    }
 
     &::after,
     &::before {
@@ -67,6 +98,39 @@
       transform: rotate(-45deg);
       top: 10px;
       left: 0px;
+    }
+  }
+
+  &__header {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-sm)  {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 15px;
+    color: #4D4D4D;
+
+    @media (min-width: $screen-sm)  {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+      line-height: 25px;
     }
   }
 

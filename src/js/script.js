@@ -492,12 +492,12 @@ $(document).ready(function(){
   }).done(function(result) {
       $('.modal-mask').addClass('modal-mask--visible');
       $('.modal__header').text('Заявка принята');
-      $('.modal__text').text('Спасибо за ваш выбор! Здесь текс, который еще нужно придумать');
+      $('.modal__text').text('Спасибо за ваш выбор! Мы свяжемся с вами в ближайшее время');
       document.getElementById('form1').reset();
     }).fail(function() {
       $('.modal-mask').addClass('modal-mask--visible');
-      $('.modal__header').text('Ой, кажется что-то пошло не так');
-      $('.modal__text').text('Позвоните нам или попробуйте отправить письмо позднее');
+      $('.modal__header').text('Что-то пошло не так');
+      $('.modal__text').text('Позвоните или попробуйте отправить письмо позднее');
     });
    //отмена действия по умолчанию для кнопки submit
       e.preventDefault();
@@ -512,12 +512,12 @@ $('#form2').submit(function(e) {
   }).done(function(result) {
       $('.modal-mask').addClass('modal-mask--visible');
       $('.modal__header').text('Заявка принята');
-      $('.modal__text').text('Спасибо за ваш выбор! Здесь текс, который еще нужно придумать');
+      $('.modal__text').text('Спасибо за ваш выбор! Мы свяжемся с вами в ближайшее время');
       document.getElementById('form1').reset();
     }).fail(function() {
       $('.modal-mask').addClass('modal-mask--visible');
-      $('.modal__header').text('Ой, кажется что-то пошло не так');
-      $('.modal__text').text('Позвоните нам или попробуйте отправить письмо позднее');
+      $('.modal__header').text('Что-то пошло не так');
+      $('.modal__text').text('Позвоните или попробуйте отправить письмо позднее');
     });
  //отмена действия по умолчанию для кнопки submit
     e.preventDefault();
