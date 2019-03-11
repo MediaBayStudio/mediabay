@@ -80,7 +80,16 @@
             @media (min-width: $screen-md)  {
               height: 35px;
               width: 35px;
+              line-height: 34px;
             }
+          }
+        }
+
+        &.slick-active {
+          top: -1px;
+
+          @media (min-width: $screen-md)  {
+            top: -2px;
           }
         }
 
@@ -88,6 +97,7 @@
             opacity: 1;
             border: 1px solid #FC364D;
             border-radius: 50%;
+            line-height: 28px;
 
             @media (min-width: $screen-sm) {
               border-width: 2px;

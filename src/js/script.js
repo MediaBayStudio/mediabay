@@ -684,4 +684,13 @@ $(window).resize(function(){
        })
    }
 })
+
+$(window).on('load', function () {
+  $preloader = $('.loader-wrapper'),
+    $loader = $preloader.find('.loader');
+  $loader.fadeOut();
+  $preloader.delay(300).fadeOut('slow');
+  $('body').css('overflow', 'scroll');
+});
+
 });

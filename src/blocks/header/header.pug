@@ -2,11 +2,11 @@ mixin header(selected)
   header.header
     h1.visually-hidden Media Bay
     if selected=='Главная'
-      a.header__wrapper.header__wrapper--active(href='/index.html')
+      a.header__wrapper.header__wrapper--active(href='/')
         svg.header__logo(width="90", height="22")
           use(xlink:href="img/sprite-svg.svg#header-logo")
     else
-      a.header__wrapper(href='/index.html')
+      a.header__wrapper(href='/')
         svg.header__logo(width="90", height="22")
           use(xlink:href="img/sprite-svg.svg#header-logo")
     +main-nav(selected)

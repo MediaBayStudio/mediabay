@@ -1,17 +1,18 @@
 mixin footer(selected)
   section.footer
-    a.footer__wrapper(href='/index.html')
+    a.footer__wrapper(href='/')
       svg.footer__logo(width="90", height="22")
         use(xlink:href="img/sprite-svg.svg#header-logo")
     div.footer__contacts
       div.footer__links
         +footer-nav(selected)
-        a.footer__phone(href='tel:+78123326872') +7 812 332-68-72
+        a.footer__phone(href='tel:+78126605998') +7 (812) 6605998
       div.footer__mail
-        a(href='mailto:mediabaystudio@gmail.com') mediabaystudio@gmail.com
+        a(href='mailto:hello@media-bay.ru') hello@media-bay.ru
+
       div.footer__address Санкт-Петербург, пр. Обуховской обороны, д.&#160;86, лит. М, БЦ&#160;«Квартал», офис 509.
     div.footer__soc
-      p.footer__copy © 2018 Студия Media bay. Все права защищены
+      p.footer__copy © 2019 Студия Media bay. Все права защищены
       ul.footer__socials
         li.footer__social.footer__social--vk
           a(href='#')
