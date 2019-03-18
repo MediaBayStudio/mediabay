@@ -189,7 +189,7 @@
     }
 
     @media (min-width: $screen-md) {
-      padding-left: 0;
+      padding-left: auto;
       padding-right: 0;
       font-size: 13px;
       line-height: 20px;
@@ -197,7 +197,7 @@
 
     @media (min-width: $screen-lg) {
       font-size: 14px;
-      margin-left: 55px;
+      margin-left: auto;
     }
   }
 
@@ -320,13 +320,15 @@
     }
 
     @media (min-width: $screen-md) {
-      margin-left: 0;
+      margin-left: auto;
+      margin-right: 0;
       font-size: 13px;
     }
 
     @media (min-width: $screen-lg) {
+      margin-left: auto;
+      margin-right: 0;
       font-size: 14px;
-      margin-left: 55px;
     }
   }
 }

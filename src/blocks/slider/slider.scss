@@ -80,7 +80,7 @@
             @media (min-width: $screen-md)  {
               height: 35px;
               width: 35px;
-              line-height: 34px;
+              line-height: 29px;
             }
           }
         }
@@ -97,14 +97,14 @@
             opacity: 1;
             border: 1px solid #FC364D;
             border-radius: 50%;
-            line-height: 28px;
+            line-height: 31px;
 
             @media (min-width: $screen-sm) {
               border-width: 2px;
             }
 
             @media (min-width: $screen-md)  {
-              line-height: 34px;
+              line-height: 31px;
             }
         }
       }
@@ -617,6 +617,13 @@
 
   }
 
+}
+
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
 }
 
 .tile {
