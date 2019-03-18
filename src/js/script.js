@@ -685,12 +685,12 @@ $(window).resize(function(){
    }
 })
 
-$(window).on('load', function () {
+$(document).ready( function () {
   $preloader = $('.loader-wrapper'),
-    $loader = $preloader.find('.loader');
-  $loader.fadeOut();
-  $preloader.delay(300).fadeOut('slow');
-  $('body').css('overflow', 'scroll');
+  $loader = $preloader.find('.loader');
+   $loader.fadeOut();
+   $preloader.delay(300).fadeOut('slow');
+   $('html').removeClass('no-scroll');
 });
 
 });
