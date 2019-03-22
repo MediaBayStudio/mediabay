@@ -132,7 +132,7 @@ $(window).load(function() {
     waitForFinalEvent(function(){
       $("div.tile").remove();
       if ($(window).width() < '768') {
-        $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+        $(".slider__sliced").sliced({ x: 8, y: 6, speed: 4000 });
         $('.activities__header').html('Что мы делаем');
       }
       else
@@ -140,16 +140,16 @@ $(window).load(function() {
 
 
         if (($(window).width() >= '768') && ($(window).width() < '1000')) {
-          $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+          $(".slider__sliced").sliced({ x: 6, y: 8, speed: 4000 });
           $('.activities__header').html('Миссия');
         }
         else {
           if ( ($(window).width() >= '1000') && ($(window).width() < '1440') ) {
-            $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
+            $(".slider__sliced").sliced({ x: 5, y: 8, speed: 4000 });
             $('.activities__header').html('Миссия');
           }
           else {
-            $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
+            $(".slider__sliced").sliced({ x: 8, y: 12, speed: 4000 });
             $('.activities__header').html('Миссия');
           }
         }
@@ -163,23 +163,23 @@ $(window).load(function() {
 $(document).ready(function(){
 
   if ($(window).width() < '768') {
-    $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+    $(".slider__sliced").sliced({ x: 8, y: 6, speed: 4000 });
 
   }
   else
 
 
     if (($(window).width() >= '768') && ($(window).width() < '1000')) {
-      $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+      $(".slider__sliced").sliced({ x: 6, y: 8, speed: 4000 });
       $('.activities__header').html('Миссия');
     }
     else {
       if ( ($(window).width() >= '1000') && ($(window).width() < '1440') ) {
-        $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
+        $(".slider__sliced").sliced({ x: 5, y: 8, speed: 4000 });
         $('.activities__header').html('Миссия');
       }
       else {
-        $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
+        $(".slider__sliced").sliced({ x: 8, y: 12, speed: 4000 });
         $('.activities__header').html('Миссия');
       }
     }
