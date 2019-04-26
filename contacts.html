@@ -19,76 +19,48 @@
     <nav class="main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item"><a href="/projects.html" title="Кейсы">Кейсы</a></li>
-        <li class="main-nav__item  main-nav__item--active"><a href="/about.html" title="О нас">О нас</a></li>
-        <li class="main-nav__item"><a href="/contacts.html" title="Контакты">Контакты</a></li>
+        <li class="main-nav__item"><a href="/about.html" title="О нас">О нас</a></li>
+        <li class="main-nav__item  main-nav__item--active"><a href="/contacts.html" title="Контакты">Контакты</a></li>
       </ul>
     </nav>
   </header>
-  <section class="titles titles--cases">
-    <h1 class="titles__header">О нас</h1>
-    <div class="titles__lead">Media bay — маленькая, но гордая студия. Нас четверо, и каждый крут в своем деле — это помогает разграничивать задачи и работать гиперэффективно. Мы владеем кучей навыков, любим интересные проекты и постоянно учимся, чтобы быть в гуще событий и трендов.</div>
-    <ul class="titles__list">
-      <li class="titles__item">
-        <h3 class="titles__title">Мы милые</h3>
-        <p class="titles__text">Очень милые. Мы поделимся с вами какао и, возможно, даже сухим молоком, а еще покажем из окна Неву и чаек.</p>
+  <section class="titles titles--contacts">
+    <h1 class="titles__header">Контакты</h1>
+    <div class="titles__lead">
+      <p>Если вы в Санкт-Петербурге — приходите в гости, с удовольствием обсудим ваш проект за чаем с печеньками.</p>
+      <p>А еще мы всегда ищем талантливых специалистов. Напишите нам — будем рады познакомиться и найти варианты сотрудничества.</p>
+    </div>
+    <ul class="info__list">
+      <li class="info__item info__item--phone">
+        <h3 class="info__title">Телефон</h3><a class="info__link" href="tel:+78126605998">+7 (812) 6605998</a>
       </li>
-      <li class="titles__item">
-        <h3 class="titles__title">Немного странные</h3>
-        <p class="titles__text">Одновременно читаем профессиональную литературу, проходим курсы и придерживаем дергающиеся глаза.</p>
+      <li class="info__item info__item--mail">
+        <h3 class="info__title">E-mail</h3><a class="info__link" href="mailto:hello@media-bay.ru">hello@media-bay.ru</a>
       </li>
-      <li class="titles__item">
-        <h3 class="titles__title">Любим свою работу</h3>
-        <p class="titles__text">Вкладываем все силы и знания в проекты, чтобы было идеально. А потом хвастаемся.</p>
-      </li>
-    </ul>
-  </section>
-  <section class="comand">
-    <h2 class="comand__header">Команда</h2>
-    <ul class="comand__list slider__comand">
-      <li class="comand__item"><img class="comand__img" src="img/photo--1.jpg"/>
-        <h3 class="comand__name">Андрей</h3><span class="comand__prof">Исполнительный директор</span>
-        <p class="comand__lead">Капитан корабля. Делает так, чтобы все были счастливы.</p>
-      </li>
-      <li class="comand__item"><img class="comand__img" src="img/photo--2.jpg"/>
-        <h3 class="comand__name">Оля</h3><span class="comand__prof">Веб-разработчик</span>
-        <p class="comand__lead">Богиня семантической верстки и котиков. Милая, как капибара.</p>
-      </li>
-      <li class="comand__item"><img class="comand__img" src="img/photo--3.jpg"/>
-        <h3 class="comand__name">Лена</h3><span class="comand__prof">UX/UI дизайнер</span>
-        <p class="comand__lead">Отвечает за смысл и красоту. Ненавидит кривую типографику.</p>
-      </li>
-      <li class="comand__item"><img class="comand__img" src="img/photo--4.jpg"/>
-        <h3 class="comand__name">Саша</h3><span class="comand__prof">Редактор</span>
-        <p class="comand__lead">Наполняет тексты добротой. Обожает Довлатова и чак-чак.</p>
+      <li class="info__item info__item--address">
+        <h3 class="info__title">Адрес</h3><span class="info__text">Санкт-Петербург, пр. Обуховской обороны, д. 86, лит. М, БЦ «Квартал», офис 509.</span>
       </li>
     </ul>
   </section>
-  <section class="contacts">
-    <h2 class="contacts__header">Контакты</h2>
-    <p class="contacts__lead">Мы любим знакомиться! Напишите нам, позвоните или просто оставьте свои данные, чтобы обсудить задачу.</p>
-    <div class="form__step contacts__form">
-      <form id="form2">
+  <section class="map" id="map"></section>
+  <section class="feedback">
+    <h2 class="feedback__header">Обратная связь</h2>
+    <div class="feedback__lead">
+      <p>Мы любим знакомиться! Напишите нам, позвоните или просто оставьте свои данные, чтобы обсудить задачу.</p>
+      <p>Расскажите нам вкратце о проекте и какие задачи нужно решить, а мы предложим варианты, учитывая свои навыки и возможности.</p>
+    </div>
+    <div class="form__step feedback__form">
+      <form id="3">
         <div class="form__answers form__answers--four">
           <p class="form__fields"><input class="form__name" type="text" name="user-name" placeholder="Представьтесь" required="required"/></p>
             <p class="form__fields"><input class="form__phone" type="phone" name="user-phone" placeholder="Номер телефона" required="required"/></p>
               <p class="form__fields"><input class="form__mail" type="email" name="user-email" placeholder="E-mail" required="required"/></p>
+                <p class="form__fields"><textarea class="form__details" placeholder="Расскажите немного о вашем проекте"></textarea></p>
                 <p class="form__fields--agree"><input class="form__agree" type="checkbox" id="agreeded" required="required"/><label class="form__agree--label" for="agreeded">Принимаю <a href="/policy.html" target="_blank">соглашение</a> об использовании персональных данных</label></p>
                 <p class="form__fields"><input class="form__send" type="submit" value="Отправить" id="contacts" disabled="disabled"/></p>
         </div>
       </form>
     </div>
-    <ul class="contacts__list">
-      <li class="contacts__item">
-        <h3 class="contacts__title">Адрес</h3>
-        <p class="contacts__text">Санкт-Петербург, пр. Обуховской обороны, д. 86, лит. М, БЦ «Квартал», офис 509.</p>
-      </li>
-      <li class="contacts__item">
-        <h3 class="contacts__title">ТЕЛЕФОН</h3><a class="contacts__text contacts__text--not-under" href="tel:+78126605998">+7 (812) 6605998</a>
-      </li>
-      <li class="contacts__item">
-        <h3 class="contacts__title">Е-MAIL</h3><a class="contacts__text" href="#">hello@media-bay.ru</a>
-      </li>
-    </ul>
   </section>
   <section class="footer"><a class="footer__wrapper" href="/"><svg class="footer__logo" width="90" height="22"><use xlink:href="img/sprite-svg.svg#header-logo"></use></svg></a>
     <div class="footer__contacts">
@@ -96,8 +68,8 @@
         <nav class="footer-nav">
           <ul class="footer__list">
             <li class="footer__item"><a href="/projects.html" title="Кейсы">Кейсы</a></li>
-            <li class="footer__item  footer__item--active"><a href="/about.html" title="О нас">О нас</a></li>
-            <li class="footer__item"><a href="/contacts.html" title="Контакты">Контакты</a></li>
+            <li class="footer__item"><a href="/about.html" title="О нас">О нас</a></li>
+            <li class="footer__item  footer__item--active"><a href="/contacts.html" title="Контакты">Контакты</a></li>
           </ul>
         </nav>
       </div><a class="footer__phone" href="tel:+78126605998">+7 (812) 660 59 98</a>

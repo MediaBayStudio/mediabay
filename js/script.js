@@ -132,20 +132,25 @@ $(window).load(function() {
     waitForFinalEvent(function(){
       $("div.tile").remove();
       if ($(window).width() < '768') {
-        $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+        $(".slider__sliced").sliced({ x: 8, y: 6, speed: 4000 });
+        $('.activities__header').html('Что мы делаем');
       }
       else
+
+
+
         if (($(window).width() >= '768') && ($(window).width() < '1000')) {
-          $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+          $(".slider__sliced").sliced({ x: 6, y: 8, speed: 4000 });
           $('.activities__header').html('Миссия');
         }
         else {
           if ( ($(window).width() >= '1000') && ($(window).width() < '1440') ) {
-            $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
+            $(".slider__sliced").sliced({ x: 5, y: 8, speed: 4000 });
             $('.activities__header').html('Миссия');
           }
           else {
-            $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
+            $(".slider__sliced").sliced({ x: 8, y: 12, speed: 4000 });
+            $('.activities__header').html('Миссия');
           }
         }
 
@@ -155,25 +160,61 @@ $(window).load(function() {
 
 });
 
-
 $(document).ready(function(){
 
+  ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [59.894080, 30.438991],
+              zoom: 16,
+              controls: []
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Медиа Гавань',
+              balloonContent: 'ДЦ Квартад'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: 'img/icon.svg',
+              // Размеры метки.
+              iconImageSize: [24, 28],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-5, -38]
+          })
+      myMap.geoObjects
+          .add(myPlacemark)
+    myMap.panes.get('ground').getElement().style.filter = 'grayscale(100%)';
+  });
+
   if ($(window).width() < '768') {
-    $(".slider__sliced").sliced({ x: 8, y: 6, speed: 5500 });
+    $(".slider__sliced").sliced({ x: 8, y: 6, speed: 4000 });
+
   }
   else
+
+
     if (($(window).width() >= '768') && ($(window).width() < '1000')) {
-      $(".slider__sliced").sliced({ x: 6, y: 8, speed: 5500 });
+      $(".slider__sliced").sliced({ x: 6, y: 8, speed: 4000 });
       $('.activities__header').html('Миссия');
     }
     else {
       if ( ($(window).width() >= '1000') && ($(window).width() < '1440') ) {
-        $(".slider__sliced").sliced({ x: 5, y: 8, speed: 5500 });
+        $(".slider__sliced").sliced({ x: 5, y: 8, speed: 4000 });
         $('.activities__header').html('Миссия');
       }
       else {
-        $(".slider__sliced").sliced({ x: 8, y: 12, speed: 5500 });
-
+        $(".slider__sliced").sliced({ x: 8, y: 12, speed: 4000 });
+        $('.activities__header').html('Миссия');
       }
     }
   $(".slider__sliced").trigger("start_quot");
@@ -184,6 +225,7 @@ $(document).ready(function(){
     var rand = Math.floor(Math.random() * $('.competitions__table td').length);
      $('.competitions__table td').eq(rand).toggleClass('colored');
   }, 4000);
+
 
   $('.slider__promo').slick({
     infinite: true,
@@ -212,18 +254,21 @@ $(document).ready(function(){
             focusOnSelect:true,
             slidesToShow: 2,
           }
-        },
-        {
-          breakpoint: 1023,
-          settings: {
-            centerMode: false,
-            focusOnSelect:true,
-            slidesToShow: 2,
-          }
         }
       ]
 
   });
+
+  $("#agreeded").change(function() {
+    if(this.checked) {
+        $('#contacts').prop('disabled', false);
+    }
+    else {
+      $('#contacts').prop('disabled', true);
+    }
+});
+
+
 
   $('.activities__text:not(:first)').hide();
 
@@ -239,8 +284,6 @@ $(document).ready(function(){
       $('.activities__header').html($(this).children().text());
 
     }
-
-
   })
 
   $('.form__step-one').on('change', function() {
@@ -456,9 +499,7 @@ $(document).ready(function(){
       default:
 
     }
-
   })
-
 
   $('.competitions__table span').on('click', function() {
     // create the notification
@@ -485,12 +526,12 @@ $(document).ready(function(){
   }).done(function(result) {
       $('.modal-mask').addClass('modal-mask--visible');
       $('.modal__header').text('Заявка принята');
-      $('.modal__text').text('Спасибо за ваш выбор! Здесь текс, который еще нужно придумать');
+      $('.modal__text').text('Спасибо за ваш выбор! Мы свяжемся с вами в ближайшее время');
       document.getElementById('form1').reset();
     }).fail(function() {
       $('.modal-mask').addClass('modal-mask--visible');
-      $('.modal__header').text('Ой, кажется что-то пошло не так');
-      $('.modal__text').text('Позвоните нам или попробуйте отправить письмо позднее');
+      $('.modal__header').text('Что-то пошло не так');
+      $('.modal__text').text('Позвоните или попробуйте отправить письмо позднее');
     });
    //отмена действия по умолчанию для кнопки submit
       e.preventDefault();
@@ -505,12 +546,12 @@ $('#form2').submit(function(e) {
   }).done(function(result) {
       $('.modal-mask').addClass('modal-mask--visible');
       $('.modal__header').text('Заявка принята');
-      $('.modal__text').text('Спасибо за ваш выбор! Здесь текс, который еще нужно придумать');
+      $('.modal__text').text('Спасибо за ваш выбор! Мы свяжемся с вами в ближайшее время');
       document.getElementById('form1').reset();
     }).fail(function() {
       $('.modal-mask').addClass('modal-mask--visible');
-      $('.modal__header').text('Ой, кажется что-то пошло не так');
-      $('.modal__text').text('Позвоните нам или попробуйте отправить письмо позднее');
+      $('.modal__header').text('Что-то пошло не так');
+      $('.modal__text').text('Позвоните или попробуйте отправить письмо позднее');
     });
  //отмена действия по умолчанию для кнопки submit
     e.preventDefault();
@@ -602,7 +643,88 @@ $(window).scroll(function(event){
       lastScrollTop = st;
     }
   }
+
 });
 
+
+$(document).ready(function(){
+  if ($(window).width() < '1024') {
+    var photos = $('.comand__img');
+    for (var i = 0; i<photos.length; i++) {
+       var src = photos[i].src;
+       photos[i].src = src.replace('.jpg', '__hoba.jpg');
+    }
+  }
+  else {
+    $('.comand__img').mouseover(function(){
+      if ( $(window).width() >= '1024' ) {
+        var src = $(this).prop('src');
+        var substr = src.substr(-8,8);
+        if (substr != 'hoba.jpg')
+        $(this).prop('src',src.replace('.jpg', '__hoba.jpg'));
+      }
+    })
+
+    $('.comand__img').mouseleave(function(){
+      if ( $(window).width() >= '1024' ) {
+        var src = $(this).prop('src');
+        var substr = src.substr(-8,8);
+        if (substr == 'hoba.jpg')
+         $(this).prop('src',src.replace('__hoba.jpg', '.jpg'));
+      }
+    })
+  }
+
+})
+
+$(window).resize(function(){
+  var photos = $('.comand__img');
+
+   if ($(window).width() < '1024') {
+     for (var i = 0; i<photos.length; i++) {
+       var src = photos[i].src;
+       var substr = src.substr(-8,8);
+
+       if (substr != 'hoba.jpg')
+        photos[i].src = src.replace('.jpg', '__hoba.jpg');
+
+     }
+
+   }
+   else {
+     for (var i = 0; i<photos.length; i++) {
+         var src = photos[i].src;
+         var substr = src.substr(-8,8);
+         if (substr == 'hoba.jpg')
+          photos[i].src = src.replace('__hoba.jpg', '.jpg');
+       }
+
+       $('.comand__img').mouseover(function(){
+         if ( $(window).width() >= '1024' ) {
+           var src = $(this).prop('src');
+           var substr = src.substr(-8,8);
+           if (substr != 'hoba.jpg')
+           $(this).prop('src',src.replace('.jpg', '__hoba.jpg'));
+         }
+       })
+
+       $('.comand__img').mouseleave(function(){
+         if ( $(window).width() >= '1024' ) {
+           var src = $(this).prop('src');
+           var substr = src.substr(-8,8);
+           if (substr == 'hoba.jpg')
+            $(this).prop('src',src.replace('__hoba.jpg', '.jpg'));
+         }
+       })
+   }
+})
+
+$(document).ready( function () {
+  $preloader = $('.loader-wrapper'),
+  $loader = $preloader.find('.loader');
+   $loader.fadeOut();
+   $preloader.delay(300).fadeOut('slow');
+   $('html').removeClass('no-scroll');
+});
 
 });
