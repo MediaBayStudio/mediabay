@@ -3,7 +3,7 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .forms {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 
   @media (min-width: $screen-sm) {
     padding-bottom: 68px;
@@ -144,8 +144,7 @@
 
   &__body {
     margin: 0;
-    padding: 60px 20px 50px;
-    min-height: 683px;
+    padding: 60px 20px 80px;
     background-color: rgba(87, 192, 191, 0.08);
 
     @media (min-width: $screen-sm) {

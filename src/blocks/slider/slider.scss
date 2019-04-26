@@ -355,11 +355,11 @@
     }
 
     @media (min-width: $screen-md) {
-      grid-template-columns: minmax(460px, 800px) minmax(460px, 640px);
+      grid-template-columns: minmax(50%, 58%) minmax(50%, 42%);
     }
 
     @media (min-width: $screen-lg) {
-      grid-template-columns: minmax(600px, 1000px) minmax(840px, 1000px);
+      grid-template-columns: minmax(42%, 50%) minmax(58%, 50%);
     }
   }
 

@@ -5,6 +5,11 @@
 .footer {
   border-top: 1px solid rgba(196, 196, 196, 0.6);
 
+  @media (min-width: $screen-sm) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   @media (min-width: $screen-md) {
     margin-left: 40px;
     margin-right: 40px;
@@ -60,46 +65,52 @@
   }
 
   &__contacts {
+    display: flex;
+    flex-direction: column;
+
     @media (min-width: $screen-sm) {
+      margin-top: -2px;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr 1.2fr;
+      grid-template-columns: 21% 17% 183px 40%;
       align-items: top;
     }
 
     @media (min-width: $screen-md) {
+      grid-template-columns: 21% 19% 183px 40%;
+      margin-top: 0;
       padding-top: 12px;
       padding-bottom: 18px;
     }
 
     @media (min-width: $screen-lg) {
-      padding-top: 12px;
+      grid-template-columns: 23% 19% 220px 42%;
+      padding-top: 27px;
       padding-bottom: 28px;
+    }
+
+    @media (min-width: 1920px) {
+      grid-template-columns: 23% 21% 220px 42%;
     }
   }
 
   &__links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     margin-bottom: 20px;
+    width: 320px;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    order: 1;
 
     @media (min-width: $screen-sm) {
+      width: auto;
       max-width: none;
       margin-bottom: 0;
       margin-left: 0;
       margin-right: 0;
-      padding-left: 6px;
-      padding-right: 13px;
     }
 
     @media (min-width: $screen-md) {
       padding: 0;
-    }
-
-    @media (min-width: $screen-lg) {
-      grid-column-gap: 60px;
     }
   }
 
@@ -110,6 +121,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media (min-width: $screen-sm) {
+      margin-top: -2px;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
 
     @media (min-width: $screen-lg) {
       justify-content: space-between;
@@ -125,12 +145,16 @@
       text-transform: uppercase;
       text-decoration: none;
 
+      @media (min-width: $screen-sm) {
+        font-size: 10px;
+      }
+
       @media (min-width: $screen-md) {
-        font-size: 14px;
+        font-size: 12px;
       }
 
       @media (min-width: $screen-lg) {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
 
@@ -142,13 +166,22 @@
   }
 
   &__phone {
-    text-align: center;
+    text-align: right;
     font-size: 13px;
     color: #000;
     text-decoration: none;
 
+    order: 3;
+
+    @media (min-width: $screen-sm) {
+      font-size: 12px;
+      order: 2;
+    }
+
     @media (min-width: $screen-lg) {
-      font-size: 16px;
+      text-align: center;
+      padding-left: 15px;
+      font-size: 15px;
     }
   }
 
@@ -156,10 +189,13 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+
+    order: 2;
 
     a {
-      font-size: 13px;
+      font-size: 12px;
+      line-height: 15px;
       color: #000;
       text-decoration: none;
       border-bottom: 1px solid #81D9D9;
@@ -176,6 +212,7 @@
   }
 
   &__address {
+    margin-top: 16px;
     margin-bottom: 25px;
     padding-left: 20px;
     padding-right: 20px;
@@ -184,24 +221,41 @@
     color: #000;
     text-align: center;
 
+    order: 4;
+
     @media (min-width: $screen-sm) {
+      margin-top: 0;
+      padding-left: 22px;
+      margin-bottom: 17px;
+      padding-right: 0;
+      font-size: 11px;
+      line-height: 15px;
       text-align: left;
     }
 
     @media (min-width: $screen-md) {
-      padding-left: auto;
+      max-width: 350px;
+      margin-bottom: 4px;
+      margin-left: auto;
+      margin-right: 0;
+      padding-left: 0;
       padding-right: 0;
       font-size: 13px;
-      line-height: 20px;
+      line-height: 15px;
     }
 
     @media (min-width: $screen-lg) {
+      max-width: 290px;
+      margin-bottom: 10px;
       font-size: 14px;
-      margin-left: auto;
     }
   }
 
   &__soc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
     border-top: 1px solid rgba(196, 196, 196, 0.6);
 
     @media (min-width: $screen-sm) {
@@ -212,25 +266,29 @@
     }
 
     @media (min-width: $screen-lg) {
-      padding-top: 10px;
+      padding-top: 3px;
     }
 
   }
 
   &__socials {
-    max-width: 320px;
+    width: 320px;
     margin: 0 auto;
-    padding: 30px 70px 25px;
+    padding: 30px 70px 5px;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    order: 1;
+
     @media (min-width: $screen-sm) {
       max-width: unset;
+      padding-top: 14px;
       padding-left: 0;
       padding-right: 0;
       width: 70%;
+      order: 2;
     }
 
     @media (min-width: $screen-md) {
@@ -238,7 +296,7 @@
     }
 
     @media (min-width: $screen-lg) {
-      width: 44%;
+      width: 57%;
     }
 
     svg {
@@ -278,7 +336,10 @@
   }
 
   &__copy {
-    display: none;
+      margin-bottom: 5px;
+      font-size: 11px;
+
+      order: 2;
 
     @media (min-width: $screen-sm) {
       display: block;
@@ -286,49 +347,54 @@
       padding: 0;
       padding-left: 20px;
       font-size: 10px;
+      order: 1;
     }
 
     @media (min-width: $screen-md) {
       padding: 0;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     @media (min-width: $screen-lg) {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 
   &__conf {
-    display: none;
+
+    font-size: 11px;
+    line-height: 11px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #81D9D9;
+    transition: 0.3s;
+
+    order: 3;
+
+    &:hover {
+      border-bottom-color: rgba(252, 54, 77, 0.7);
+    }
+
 
     @media (min-width: $screen-sm) {
       margin: 0;
-      margin-left: 20px;
-      margin-right: auto;
+      margin-left: auto;
       padding: 0;
       display: block;
       font-size: 11px;
       line-height: 11px;
-      color: #000;
-      text-decoration: none;
-      border-bottom: 1px solid #81D9D9;
-      transition: 0.3s;
-
-      &:hover {
-        border-bottom-color: rgba(252, 54, 77, 0.7);
-      }
     }
 
     @media (min-width: $screen-md) {
       margin-left: auto;
       margin-right: 0;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     @media (min-width: $screen-lg) {
       margin-left: auto;
       margin-right: 0;
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 }

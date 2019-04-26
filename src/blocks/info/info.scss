@@ -1,0 +1,91 @@
+// В этом файле должны быть стили для БЭМ-блока info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.info {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 58px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-top: 68px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 39px;
+    }
+  }
+
+  &__item{
+    margin-bottom: 22px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 31px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 33px;
+    }
+
+    &--address {
+      order: 1;
+    }
+
+    &--phone {
+      order: 2;
+    }
+
+    &--mail {
+      order: 3;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: rgba(252, 54, 77, 0.6);
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 4px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+  }
+
+  &__link,
+  &__text {
+    font-size: 13px;
+    line-height: 20px;
+    color: #6B7981;
+    text-decoration: none;
+
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+    }
+  }
+
+}

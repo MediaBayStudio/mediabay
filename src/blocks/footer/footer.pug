@@ -6,7 +6,7 @@ mixin footer(selected)
     div.footer__contacts
       div.footer__links
         +footer-nav(selected)
-        a.footer__phone(href='tel:+78126605998') +7 (812) 6605998
+      a.footer__phone(href='tel:+78126605998') +7 (812) 660 59 98
       div.footer__mail
         a(href='mailto:hello@media-bay.ru') hello@media-bay.ru
 
@@ -31,6 +31,7 @@ mixin footer(selected)
             span.visually-hidden Instagram
       a.footer__conf(href='/policy.html') Политика конфиденциальности
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
     script(src='js/modernizr.custom.js')
     script(src='js/classie.js')
     script(src='js/notificationFx.js')

@@ -1,0 +1,38 @@
+// В этом файле должны быть стили для БЭМ-блока map, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.map {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: -45px;
+  padding: 0 20px 50px;
+  min-height: 200px;
+  box-sizing: content-box;
+
+  @media (min-width: $screen-sm) {
+    min-height: 320px;
+    margin: 0;
+    margin-top: -15px;
+    padding-top: 70px;
+    padding-bottom: 120px;
+
+    background-image: url('../img/map-back--sm.svg');
+    background-size: 100%;
+    background-position: top;
+
+  }
+
+  @media (min-width: $screen-md) {
+    margin-top: -25px;
+    padding: 100px 40px 130px;
+    background-image: url('../img/map-back--md.svg');
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-top: 25px;
+    padding: 130px 100px 190px;
+    background-image: url('../img/map-back--lg.svg');
+  }
+}

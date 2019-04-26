@@ -162,6 +162,41 @@ $(window).load(function() {
 
 $(document).ready(function(){
 
+  ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [59.894080, 30.438991],
+              zoom: 16,
+              controls: []
+          }, {
+              autoFitToViewport: 'always',
+              searchControlProvider: 'yandex#search'
+          }),
+
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Медиа Гавань',
+              balloonContent: 'ДЦ Квартад'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: 'img/icon.svg',
+              // Размеры метки.
+              iconImageSize: [24, 28],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-5, -38]
+          })
+      myMap.geoObjects
+          .add(myPlacemark)
+    myMap.panes.get('ground').getElement().style.filter = 'grayscale(100%)';
+  });
+
   if ($(window).width() < '768') {
     $(".slider__sliced").sliced({ x: 8, y: 6, speed: 4000 });
 

@@ -145,6 +145,8 @@ mixin forms()
             input.form__phone(type='phone' name='user-phone' placeholder='Номер телефона' required)
           p.form__fields
             input.form__mail(type='email' name='user-email' placeholder='E-mail' required)
+          p.form__fields
+            textarea.form__details(placeholder='Расскажите немного о вашем проекте')
           p.form__fields--agree
             input.form__agree(type='checkbox' id='agreeded' required)
             label.form__agree--label(for='agreeded') Принимаю #[a(href="/policy.html" target="_blank") соглашение] об использовании персональных данных

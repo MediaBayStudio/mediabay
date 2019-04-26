@@ -1,0 +1,113 @@
+// В этом файле должны быть стили для БЭМ-блока feedback, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.feedback {
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 84px;
+  padding: 60px 20px 27px;
+  background-color: #F2FAFA;
+
+  @media (min-width: $screen-sm) {
+    display: grid;
+    grid-template-columns: 1.32fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    padding-top: 75px;
+    padding-bottom: 60px;
+    background-image: url('../img/light.svg');
+    background-position: right bottom;
+    background-size: 41%;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $screen-md) {
+    grid-column-gap: 40px;
+    grid-row-gap: 32px;
+    margin-bottom: 88px;
+    padding-bottom: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $screen-lg)  {
+    grid-template-columns: 1.15fr 1fr;
+    grid-column-gap: 120px;
+    margin-bottom: 120px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 113px;
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 23px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+      font-size: 28px;
+      line-height: 35px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 36px;
+      line-height: 45px;
+    }
+  }
+
+  &__lead {
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 20px;
+
+    @media (min-width: $screen-sm) {
+      grid-column-start: 2;
+      grid-row-start: 2;
+      margin-top: 0;
+      margin-bottom: 22px;
+      line-height: 25px;
+      font-size: 13px;
+      line-height: 20px;
+      color: #838B9B;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-top: 13px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 17px;
+      margin-bottom: 24px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    p {
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+      @media (min-width: $screen-lg) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__form {
+    margin-bottom: 46px;
+
+    @media (min-width: $screen-sm) {
+      grid-column-start: 1;
+    }
+
+  }
+}

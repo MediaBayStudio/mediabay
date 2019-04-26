@@ -1,0 +1,15 @@
+extends templates/layout-home.pug
+
+
+block header
+  +header('Контакты')
+  +titles('Контакты', 'contacts')
+
+block page
+  +map()
+  +feedback()
+
+
+block footer
+  +footer('Контакты')
+  +modal()

@@ -1,0 +1,22 @@
+mixin feedback()
+  section.feedback
+    h2.feedback__header Обратная связь
+    div.feedback__lead
+      p Мы любим знакомиться! Напишите нам, позвоните или просто оставьте свои данные, чтобы обсудить задачу.
+      p Расскажите нам вкратце о проекте и какие задачи нужно решить, а мы предложим варианты, учитывая свои навыки и возможности.
+    div.form__step.feedback__form
+      form(id='3')
+        div.form__answers.form__answers--four
+          p.form__fields
+            input.form__name(type='text' name='user-name' placeholder='Представьтесь' required)
+          p.form__fields
+            input.form__phone(type='phone' name='user-phone' placeholder='Номер телефона' required)
+          p.form__fields
+            input.form__mail(type='email' name='user-email' placeholder='E-mail' required)
+          p.form__fields
+            textarea.form__details(placeholder='Расскажите немного о вашем проекте')
+          p.form__fields--agree
+            input.form__agree(type='checkbox' id='agreeded' required)
+            label.form__agree--label(for='agreeded') Принимаю #[a(href="/policy.html" target="_blank") соглашение] об использовании персональных данных
+          p.form__fields
+            input.form__send(type='submit' value='Отправить' id='contacts' disabled)
