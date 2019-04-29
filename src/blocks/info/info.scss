@@ -47,6 +47,10 @@
 
     &--mail {
       order: 3;
+
+      a {
+        text-decoration: underline;
+      }
     }
   }
 
