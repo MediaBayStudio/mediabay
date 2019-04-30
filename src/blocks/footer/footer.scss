@@ -25,27 +25,31 @@
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 30px;
-    width: 150px;
+    width: 140px;
     display: block;
     left: 50%;
-    margin-left: -75px;
+    margin-left: -73px;
     background-color: #fff;
     top: -10px;
 
     @media (min-width: $screen-sm) {
-      width: 154px;
+      width: 140px;
       left: 50%;
-      margin-left: -77px;
+      margin-left: -70px;
       top: -15px;
+      padding-left: 23px;
     }
 
     @media (min-width: $screen-md) {
-      margin-left: -82px;
+      width: 160px;
+      margin-left: -80px;
+      padding-left: 28px;
     }
 
     @media (min-width: $screen-lg) {
-      width: 192px;
-      margin-left: -92px;
+      width: 200px;
+      margin-left: -100px;
+      padding-left: 35px;
     }
   }
 
@@ -71,32 +75,29 @@
     @media (min-width: $screen-sm) {
       margin-top: -2px;
       display: grid;
-      grid-template-columns: 21% 17% 183px 40%;
+      grid-template-columns: 1fr 170px 1fr;
+      grid-column-gap: 35px;
       align-items: top;
     }
 
     @media (min-width: $screen-md) {
-      grid-template-columns: 21% 19% 183px 40%;
+      grid-template-columns: 1fr 180px 1fr;
+      grid-column-gap: 60px;
       margin-top: 0;
       padding-top: 12px;
       padding-bottom: 18px;
     }
 
     @media (min-width: $screen-lg) {
-      grid-template-columns: 21% 20% 220px 42%;
+      grid-column-gap: 180px;
       padding-top: 27px;
-      padding-bottom: 28px;
-    }
-
-    @media (min-width: 1920px) {
-      grid-template-columns: 23% 21% 220px 42%;
+      padding-bottom: 18px;
     }
   }
 
   &__links {
     margin-bottom: 20px;
-    width: 320px;
-    max-width: 400px;
+    width: 270px;
     margin-left: auto;
     margin-right: auto;
     order: 1;
@@ -110,6 +111,11 @@
     }
 
     @media (min-width: $screen-md) {
+      padding: 0;
+      padding-right: 15%;
+    }
+
+    @media (min-width: $screen-lg) {
       padding: 0;
     }
   }
@@ -150,7 +156,7 @@
       }
 
       @media (min-width: $screen-md) {
-        font-size: 12px;
+        font-size: 13px;
       }
 
       @media (min-width: $screen-lg) {
@@ -165,24 +171,64 @@
     }
   }
 
+  &__conts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    order: 2;
+
+    li {
+      display: block;
+      text-align: center;
+
+      @media (min-width: $screen-sm) {
+        margin-top: -2px;
+
+        &:first-of-type {
+          margin-top: -4px;
+          order: 2;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        margin-top: -1px;
+
+        &:first-of-type {
+          margin-top: 2px;
+        }
+      }
+
+      @media (min-width: $screen-lg) {
+        &:first-of-type {
+          margin-top: 8px;
+        }
+      }
+
+    }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
   &__phone {
-    text-align: center;
     font-size: 13px;
     color: #000;
     text-decoration: none;
 
-    order: 3;
-
     @media (min-width: $screen-sm) {
+      margin: 0;
       text-align: right;
-      font-size: 12px;
-      order: 2;
+      font-size: 14px;
+      line-height: 20px;
+
     }
 
     @media (min-width: $screen-lg) {
       text-align: center;
-      padding-left: 15px;
-      font-size: 15px;
+      font-size: 17px;
     }
   }
 
@@ -191,25 +237,27 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #71AEB7;
+    text-decoration: none;
+    border-bottom: 1px solid #81D9D9;
+    transition: 0.3s;
 
-    order: 2;
-
-    a {
-      font-size: 12px;
-      line-height: 15px;
-      color: #000;
-      text-decoration: none;
-      border-bottom: 1px solid #81D9D9;
-      transition: 0.3s;
-
-      &:hover {
-        border-bottom-color: rgba(252, 54, 77, 0.7);
-      }
-
-      @media (min-width: $screen-lg) {
-        font-size: 16px;
-      }
+    &:hover {
+      border-bottom-color: rgba(252, 54, 77, 0.7);
     }
+
+    @media (min-width: $screen-sm) {
+      margin: 0;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 15px;
+    }
+
   }
 
   &__address {
@@ -226,12 +274,12 @@
 
     @media (min-width: $screen-sm) {
       margin-top: 0;
-      padding-left: 22px;
+      padding-left: 0;
       margin-bottom: 17px;
       padding-right: 0;
       font-size: 11px;
       line-height: 15px;
-      text-align: left;
+      text-align: right;
     }
 
     @media (min-width: $screen-md) {
@@ -242,7 +290,7 @@
       padding-left: 0;
       padding-right: 0;
       font-size: 13px;
-      line-height: 15px;
+      line-height: 20px;
     }
 
     @media (min-width: $screen-lg) {
@@ -270,6 +318,7 @@
 
     @media (min-width: $screen-lg) {
       padding-top: 3px;
+      grid-template-columns: 1fr 0.5fr 1fr;
     }
 
   }
