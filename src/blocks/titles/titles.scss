@@ -102,10 +102,15 @@
   }
 
   &--contacts {
+    background-image: url('../img/titles__back-contacts--sm.png');
     @media (min-width: $screen-sm) {
       grid-template-columns: 1.15fr 1fr;
       grid-template-rows: 70px;
       grid-column-gap: 90px;
+      background-image: url('../img/titles__back-contacts--md.png');
+      background-repeat: no-repeat;
+      background-size: 60%;
+
     }
 
     @media (min-width: $screen-md) {
@@ -114,10 +119,14 @@
       margin-bottom: 0;
       padding-top: 83px;
       padding-bottom: 0;
+      background-size: contain;
+      background-image: url('../img/titles__back-contacts--lg.png');
     }
 
     @media (min-width: $screen-lg) {
       margin-bottom: 0;
+      background-size: contain;
+      background-image: url('../img/titles__back-contacts--lg.png');
     }
   }
 

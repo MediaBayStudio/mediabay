@@ -80,7 +80,7 @@
             @media (min-width: $screen-md)  {
               height: 35px;
               width: 35px;
-              line-height: 29px;
+              line-height: 33px;
             }
           }
         }
@@ -97,14 +97,15 @@
             opacity: 1;
             border: 1px solid #FC364D;
             border-radius: 50%;
-            line-height: 31px;
+            line-height: 29px;
 
             @media (min-width: $screen-sm) {
               border-width: 2px;
+              line-height: 28px;
             }
 
             @media (min-width: $screen-md)  {
-              line-height: 31px;
+              line-height: 33px;
             }
         }
       }
