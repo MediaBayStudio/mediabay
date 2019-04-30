@@ -2,13 +2,13 @@ extends templates/layout-home.pug
 
 
 block header
+  +loader()
   +header('О нас')
+
+block page
   +titles('О нас', 'cases')
   +comand()
   +feedback()
-
-block page
-
 
 block footer
   +footer('О нас')
