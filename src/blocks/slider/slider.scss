@@ -268,6 +268,10 @@
       @media (min-width: 1880px) {
         right: 42%;
       }
+
+      @media (min-width: 1920px) {
+        right: 44%;
+      }
     }
 
     .slick-next {
@@ -342,6 +346,11 @@
 
         @media (min-width: 1880px) {
           right: 35%;
+        }
+
+
+        @media (min-width: 1920px) {
+          right: 39%;
         }
     }
   }
@@ -645,3 +654,6 @@ button::-moz-focus-inner {
   -o-transition: none !important;
   transition: none !important;
 }
+
+
+// slick-theme.scss

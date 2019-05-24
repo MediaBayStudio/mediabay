@@ -52,8 +52,8 @@ let postCssPlugins = [
 
 // Изображения, которые нужно копировать
 let images = [
-  dirs.source + '/img/*.{gif,png,jpg,jpeg,svg,ico}',
-  dirs.source + '/blocks/**/img/*.{gif,png,jpg,jpeg,svg}',
+  dirs.source + '/img/*.{gif,png,jpg,jpeg,svg,ico,webp}',
+  dirs.source + '/blocks/**/img/*.{gif,png,jpg,jpeg,svg,webp}',
   '!' + dirs.source + '/blocks/sprite-png/png/*',
   '!' + dirs.source + '/blocks/sprite-svg/svg/*',
 ];
@@ -64,12 +64,17 @@ let jsList = [
   './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
   './node_modules/svg4everybody/dist/svg4everybody.js',
   './node_modules/object-fit-images/dist/ofi.js',
+  './node_modules/slick-carousel/slick/slick.min.js',
+  dirs.source + '/js/classie.js',
+  dirs.source + '/js/modernizr.custom.js',
+  dirs.source + '/js/modernizr.custom.js',
+  dirs.source + '/js/notificationFx.js',
   dirs.source + '/js/script.js',
 ];
 
 // Компиляция и обработка стилей
 gulp.task('style', function () {
-  return gulp.src(dirs.source + '/scss/style.scss')        // какой файл компилировать
+  return gulp.src(['./node_modules/slick-carousel/slick/slick.css', './node_modules/slick-carousel/slick/slick-theme.css', dirs.source + '/scss/style.scss'])        // какой файл компилировать
     .pipe(plumber({                                        // при ошибках не останавливаем автоматику сборки
       errorHandler: function(err) {
         notify.onError({
