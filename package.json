@@ -50,7 +50,7 @@
     "vinyl-buffer": "^1.0.0"
   },
   "dependencies": {
-    "jquery": "^3.1.1",
+    "jquery": "^3.5.0",
     "jquery-migrate": "^3.0.0",
     "object-fit-images": "^3.2.3",
     "slick-carousel": "^1.8.1",
